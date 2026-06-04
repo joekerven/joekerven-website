@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Writing by Joe Kerven — travel essays, science communication, poetry, personal essays and brand copywriting. Available for hire." />
+  <meta name="keywords" content="Joe Kerven writing, travel writing, science communication, ocean poetry, marine biology writing, copywriter for hire" />
+  <meta name="author" content="Joe Kerven" />
+  <meta property="og:title" content="Writing — Joe Kerven" />
+  <meta property="og:description" content="Travel essays, science communication, poetry and brand copy by Joe Kerven — marine scientist, surf instructor and writer." />
+  <title>Writing — Joe Kerven</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #F5F0E8;
+      --cream-dark: #EDE6D6;
+      --charcoal: #1A1A18;
+      --charcoal-mid: #2E2E2C;
+      --ocean: #2A6B7C;
+      --ocean-light: #5A9BAB;
+      --ocean-pale: #C2D8DE;
+      --sand: #B8A88A;
+      --sand-light: #E8DFD0;
+      --white: #FFFFFF;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'DM Sans', sans-serif;
+      --transition: 0.3s ease;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-sans); background: var(--cream); color: var(--charcoal); overflow-x: hidden; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    button { font-family: var(--font-sans); cursor: pointer; border: none; background: none; }
+
+    /* ===== NAV ===== */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.5rem 4rem;
+      background: rgba(245,240,232,0.96); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--sand-light);
+    }
+    .nav__logo { font-family: var(--font-serif); font-size: 1.2rem; color: var(--charcoal); letter-spacing: 0.08em; }
+    .nav__links { display: flex; align-items: center; gap: 2rem; }
+    .nav__links a { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--charcoal); transition: color var(--transition); }
+    .nav__links a:hover { color: var(--ocean); }
+    .nav__links a.active { color: var(--ocean); border-bottom: 1px solid var(--ocean); padding-bottom: 2px; }
+    .nav__back { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ocean); transition: color var(--transition); }
+    .nav__back:hover { color: var(--charcoal); }
+
+    /* ===== PAGE HERO ===== */
+    .page-hero {
+      padding: 10rem 4rem 0;
+      max-width: 1280px;
+    }
+    .page-hero__inner {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: end;
+      padding-bottom: 4rem;
+      border-bottom: 1px solid var(--sand-light);
+    }
+    .page-hero__eyebrow { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ocean); margin-bottom: 1.25rem; font-weight: 500; }
+    .page-hero__title { font-family: var(--font-serif); font-size: clamp(2.8rem, 5vw, 4.5rem); font-weight: 300; line-height: 1.1; }
+    .page-hero__title em { font-style: italic; color: var(--ocean); }
+    .page-hero__desc { font-size: 0.95rem; line-height: 1.9; color: var(--charcoal-mid); font-weight: 300; margin-bottom: 2rem; }
+
+    /* ===== HIRE + SUBSTACK STRIP ===== */
+    .cta-strip {
+      background: var(--charcoal);
+      padding: 2rem 4rem;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 2rem; flex-wrap: wrap;
+    }
+    .cta-strip__left { display: flex; align-items: center; gap: 3rem; flex-wrap: wrap; }
+    .cta-strip__item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .cta-strip__label { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,240,232,0.35); }
+    .cta-strip__value { font-family: var(--font-serif); font-size: 1rem; color: var(--cream); }
+    .cta-strip__divider { width: 1px; height: 40px; background: rgba(255,255,255,0.1); }
+    .cta-strip__btns { display: flex; gap: 1rem; flex-shrink: 0; }
+    .btn { display: inline-block; padding: 0.8rem 1.75rem; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; transition: var(--transition); cursor: pointer; }
+    .btn--ocean { background: var(--ocean); color: white; }
+    .btn--ocean:hover { background: var(--ocean-light); }
+    .btn--outline { background: transparent; color: var(--cream); border: 1px solid rgba(255,255,255,0.25); }
+    .btn--outline:hover { border-color: var(--ocean-light); color: var(--ocean-light); }
+    .btn--dark { background: var(--charcoal); color: var(--cream); }
+    .btn--dark:hover { background: var(--charcoal-mid); }
+    .btn--full { width: 100%; text-align: center; display: block; }
+
+    /* ===== FILTER NAV ===== */
+    .filter-nav {
+      padding: 2rem 4rem;
+      border-bottom: 1px solid var(--sand-light);
+      display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;
+      position: sticky; top: 72px; background: rgba(245,240,232,0.97);
+      backdrop-filter: blur(8px); z-index: 50;
+    }
+    .filter-btn {
+      font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 0.45rem 1.1rem; border: 1px solid var(--sand-light);
+      background: transparent; color: var(--charcoal-mid); cursor: pointer;
+      transition: all var(--transition);
+    }
+    .filter-btn:hover, .filter-btn.active { background: var(--ocean); color: white; border-color: var(--ocean); }
+
+    /* ===== WRITING GRID ===== */
+    .writing-section { padding: 4rem 4rem; max-width: 1280px; margin: 0 auto; }
+    .writing-section__category-label {
+      font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--ocean); margin-bottom: 2rem; padding-bottom: 1rem;
+      border-bottom: 1px solid var(--ocean-pale); display: flex;
+      align-items: center; gap: 1rem;
+    }
+    .writing-section__category-label span { color: var(--sand); font-size: 0.6rem; }
+    .writing-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 5rem; }
+
+    /* ===== WRITING CARDS ===== */
+    .writing-card {
+      background: var(--cream-dark); overflow: hidden;
+      transition: transform var(--transition); cursor: pointer;
+    }
+    .writing-card:hover { transform: translateY(-3px); }
+    .writing-card--featured { grid-column: span 2; display: grid; grid-template-columns: 1fr 1fr; }
+    .writing-card--poem { background: var(--charcoal); }
+    .writing-card__img {
+      height: 220px;
+      background: var(--ocean-pale);
+      background-image: radial-gradient(ellipse at 30% 50%, rgba(42,107,124,0.3) 0%, transparent 60%);
+      position: relative; overflow: hidden;
+    }
+    .writing-card--poem .writing-card__img {
+      background: #0D2B35;
+      background-image: radial-gradient(ellipse at 40% 50%, rgba(42,107,124,0.4) 0%, transparent 60%);
+    }
+    .writing-card--featured .writing-card__img { height: 100%; min-height: 280px; }
+    .writing-card__img::after {
+      content: '[ photo ]'; position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: rgba(42,107,124,0.35);
+    }
+    .writing-card--poem .writing-card__img::after { color: rgba(90,155,171,0.3); }
+    .writing-card__content { padding: 2.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+    .writing-card__tag {
+      font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--ocean); background: var(--ocean-pale);
+      padding: 0.25rem 0.75rem; display: inline-block; align-self: flex-start;
+    }
+    .writing-card--poem .writing-card__tag { background: rgba(42,107,124,0.2); color: var(--ocean-light); }
+    .writing-card__title { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 400; line-height: 1.2; }
+    .writing-card--poem .writing-card__title { color: var(--cream); }
+    .writing-card__desc { font-size: 0.88rem; line-height: 1.8; color: var(--charcoal-mid); font-weight: 300; flex: 1; }
+    .writing-card--poem .writing-card__desc { color: rgba(245,240,232,0.55); }
+    .writing-card__excerpt {
+      font-family: var(--font-serif); font-style: italic; font-size: 0.95rem;
+      line-height: 1.75; color: var(--charcoal);
+      border-left: 2px solid var(--ocean-pale); padding-left: 1rem;
+    }
+    .writing-card--poem .writing-card__excerpt { color: rgba(245,240,232,0.7); border-left-color: var(--ocean); }
+    .writing-card__read { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ocean); transition: color var(--transition); margin-top: auto; }
+    .writing-card--poem .writing-card__read { color: var(--ocean-light); }
+    .writing-card:hover .writing-card__read { color: var(--charcoal); }
+    .writing-card--poem:hover .writing-card__read { color: var(--white); }
+
+    /* Coming soon card */
+    .writing-card--soon { cursor: default; opacity: 0.7; }
+    .writing-card--soon:hover { transform: none; }
+
+    /* ===== SUBSTACK SECTION ===== */
+    .substack-section {
+      background: var(--charcoal); padding: 5rem 4rem;
+    }
+    .substack-section__inner {
+      max-width: 1280px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+    }
+    .substack-section__eyebrow { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ocean-light); margin-bottom: 1rem; font-weight: 500; }
+    .substack-section__title { font-family: var(--font-serif); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; line-height: 1.15; color: var(--cream); margin-bottom: 1.5rem; }
+    .substack-section__title em { font-style: italic; color: var(--ocean-light); }
+    .substack-section__desc { font-size: 0.92rem; line-height: 1.9; color: rgba(245,240,232,0.55); font-weight: 300; margin-bottom: 2rem; }
+    .substack-section__what { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2.5rem; }
+    .substack-what__item { display: flex; align-items: flex-start; gap: 1rem; }
+    .substack-what__dot { width: 4px; height: 4px; border-radius: 50%; background: var(--ocean-light); margin-top: 0.55rem; flex-shrink: 0; }
+    .substack-what__text { font-size: 0.88rem; color: rgba(245,240,232,0.6); line-height: 1.7; font-weight: 300; }
+    .substack-section__signup { background: rgba(255,255,255,0.04); padding: 2.5rem; }
+    .substack-section__signup h3 { font-family: var(--font-serif); font-size: 1.6rem; font-weight: 400; color: var(--cream); margin-bottom: 0.5rem; }
+    .substack-section__signup p { font-size: 0.85rem; color: rgba(245,240,232,0.4); margin-bottom: 1.5rem; font-weight: 300; }
+    .signup-form { display: flex; flex-direction: column; gap: 0.75rem; }
+    .signup-form input {
+      padding: 0.9rem 1.25rem; border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05); color: var(--cream); font-size: 0.9rem;
+      outline: none; transition: border-color var(--transition); font-family: var(--font-sans);
+    }
+    .signup-form input:focus { border-color: var(--ocean-light); }
+    .signup-form input::placeholder { color: rgba(245,240,232,0.25); }
+    .signup-form__note { font-size: 0.7rem; color: rgba(245,240,232,0.2); }
+
+    /* ===== HIRE ME SECTION ===== */
+    .hire-section { background: var(--cream-dark); padding: 5rem 4rem; }
+    .hire-section__inner { max-width: 1280px; margin: 0 auto; }
+    .hire-section__header { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; margin-bottom: 4rem; }
+    .hire-section__eyebrow { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ocean); margin-bottom: 1rem; font-weight: 500; }
+    .hire-section__title { font-family: var(--font-serif); font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.12; }
+    .hire-section__title em { font-style: italic; color: var(--ocean); }
+    .hire-section__desc { font-size: 0.92rem; line-height: 1.9; color: var(--charcoal-mid); font-weight: 300; }
+    .hire-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: var(--sand-light); margin-bottom: 3rem; }
+    .hire-card { background: var(--cream); padding: 2.5rem; transition: background var(--transition); }
+    .hire-card:hover { background: var(--cream-dark); }
+    .hire-card__type { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ocean); display: block; margin-bottom: 1rem; }
+    .hire-card h4 { font-family: var(--font-serif); font-size: 1.25rem; font-weight: 400; margin-bottom: 0.75rem; line-height: 1.3; }
+    .hire-card p { font-size: 0.83rem; line-height: 1.8; color: var(--charcoal-mid); font-weight: 300; }
+    .hire-section__cta { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+    .hire-section__note { font-family: var(--font-serif); font-style: italic; font-size: 0.9rem; color: var(--sand); }
+
+    /* ===== MODAL ===== */
+    .writing-modal {
+      position: fixed; inset: 0; z-index: 200;
+      background: rgba(26,26,24,0.88); backdrop-filter: blur(8px);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+      padding: 2rem;
+    }
+    .writing-modal.open { opacity: 1; pointer-events: all; }
+    .writing-modal__inner {
+      background: var(--cream); max-width: 720px; width: 100%;
+      max-height: 90vh; overflow-y: auto; position: relative;
+    }
+    .writing-modal__img {
+      height: 260px;
+      background: var(--ocean-pale);
+      background-image: radial-gradient(ellipse at 40% 50%, rgba(42,107,124,0.35) 0%, transparent 60%);
+    }
+    .writing-modal--poem .writing-modal__img {
+      background: #0D2B35;
+      background-image: radial-gradient(ellipse at 40% 50%, rgba(42,107,124,0.4) 0%, transparent 60%);
+    }
+    .writing-modal__body { padding: 3.5rem; }
+    .writing-modal__tag { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ocean); display: block; margin-bottom: 1rem; }
+    .writing-modal__title { font-family: var(--font-serif); font-size: 2.2rem; font-weight: 400; line-height: 1.15; margin-bottom: 2rem; }
+    .writing-modal__text p { font-size: 0.95rem; line-height: 1.9; color: var(--charcoal-mid); font-weight: 300; margin-bottom: 1.25rem; }
+    .writing-modal__text p em { font-style: italic; }
+    .writing-modal__text p strong { font-weight: 500; color: var(--charcoal); }
+    .writing-modal__pullquote {
+      font-family: var(--font-serif); font-style: italic; font-size: 1.1rem;
+      line-height: 1.75; color: var(--charcoal);
+      border-left: 2px solid var(--ocean); padding-left: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    .writing-modal__poem {
+      font-family: var(--font-serif); font-size: 1.1rem; line-height: 2.1;
+      color: var(--charcoal); white-space: pre-line; margin-bottom: 1.5rem;
+    }
+    .writing-modal__poem em { font-style: italic; color: var(--ocean); }
+    .writing-modal__author { display: block; margin-top: 2rem; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ocean); }
+    .writing-modal__close {
+      position: absolute; top: 1.5rem; right: 1.5rem;
+      width: 40px; height: 40px; background: var(--charcoal); color: white;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; font-size: 1rem; transition: background var(--transition); border: none;
+    }
+    .writing-modal__close:hover { background: var(--ocean); }
+
+    /* ===== FOOTER ===== */
+    .footer { background: var(--charcoal); padding: 3rem 4rem; display: flex; justify-content: space-between; align-items: center; }
+    .footer__logo { font-family: var(--font-serif); font-size: 1.2rem; color: var(--cream); font-weight: 300; }
+    .footer__back { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,240,232,0.4); transition: color var(--transition); }
+    .footer__back:hover { color: var(--ocean-light); }
+
+
+    /* ===== SUBSTACK STRIP ===== */
+    .substack-strip {
+      background: var(--charcoal); padding: 3rem 4rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .substack-strip__inner {
+      max-width: 1280px; margin: 0 auto;
+      display: flex; align-items: center; gap: 3rem; flex-wrap: wrap;
+    }
+    .substack-strip__text { flex: 1; min-width: 200px; }
+    .substack-strip__title {
+      font-family: var(--font-serif); font-size: 1.3rem; font-weight: 400;
+      color: var(--cream); margin-bottom: 0.4rem;
+    }
+    .substack-strip__desc {
+      font-size: 0.82rem; color: rgba(245,240,232,0.4);
+      font-weight: 300; line-height: 1.6;
+    }
+    .substack-strip__form {
+      display: flex; gap: 0; flex-shrink: 0;
+    }
+    .substack-strip__form input {
+      padding: 0.82rem 1.25rem; border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05); color: var(--cream);
+      font-size: 0.88rem; outline: none; font-family: var(--font-sans);
+      transition: border-color 0.3s; width: 220px;
+    }
+    .substack-strip__form input:focus { border-color: var(--ocean-light); }
+    .substack-strip__form input::placeholder { color: rgba(245,240,232,0.25); }
+
+    /* ===== HIRE OFFERINGS ===== */
+    .hire-offerings {
+      display: flex; flex-direction: column; gap: 0;
+      margin-bottom: 3rem;
+      border-top: 1px solid var(--sand-light);
+    }
+    .hire-offering {
+      display: flex; align-items: flex-start; gap: 2.5rem;
+      padding: 2rem 0; border-bottom: 1px solid var(--sand-light);
+      transition: background var(--transition);
+    }
+    .hire-offering__num {
+      font-family: var(--font-serif); font-size: 2.5rem; font-weight: 300;
+      color: var(--ocean-pale); line-height: 1; flex-shrink: 0; width: 48px;
+    }
+    .hire-offering h4 {
+      font-family: var(--font-serif); font-size: 1.2rem; font-weight: 400;
+      margin-bottom: 0.4rem; color: var(--charcoal);
+    }
+    .hire-offering p {
+      font-size: 0.85rem; line-height: 1.75;
+      color: var(--charcoal-mid); font-weight: 300;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .substack-strip { padding: 2.5rem 2rem; }
+      .substack-strip__inner { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+      .substack-strip__form { width: 100%; }
+      .substack-strip__form input { flex: 1; width: auto; }
+      .nav { padding: 1.25rem 2rem; }
+      .nav__links { display: none; }
+      .page-hero { padding: 8rem 2rem 0; }
+      .page-hero__inner { grid-template-columns: 1fr; gap: 2rem; }
+      .cta-strip { padding: 1.5rem 2rem; flex-direction: column; align-items: flex-start; }
+      .filter-nav { padding: 1.5rem 2rem; top: 65px; }
+      .writing-section { padding: 3rem 2rem; }
+      .writing-grid { grid-template-columns: 1fr; }
+      .writing-card--featured { grid-column: span 1; grid-template-columns: 1fr; }
+      .writing-card--featured .writing-card__img { height: 220px; }
+      .substack-section { padding: 4rem 2rem; }
+      .substack-section__inner { grid-template-columns: 1fr; gap: 3rem; }
+      .hire-section { padding: 4rem 2rem; }
+      .hire-section__header { grid-template-columns: 1fr; gap: 2rem; }
+      .hire-grid { grid-template-columns: 1fr; }
+      .footer { padding: 2rem; flex-direction: column; gap: 1rem; text-align: center; }
+    }
+    @media (max-width: 640px) {
+      .cta-strip__divider { display: none; }
+      .hire-section__cta { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">Joe Kerven</a>
+    <div class="nav__links">
+      <a href="index.html">Home</a>
+      <a href="writing.html" class="active">Writing</a>
+      <a href="ugc.html">UGC</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <a href="index.html" class="nav__back">← Back to site</a>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero__inner">
+      <div>
+        <p class="page-hero__eyebrow">Writing — Joe Kerven</p>
+        <h1 class="page-hero__title"><em>Writing</em><br/>that is lived.</h1>
+      </div>
+      <div>
+        <p class="page-hero__desc">In a world of digital fakeness, experience is the true currency. Everything I write comes from a life actually lived — ocean, rainforest, surf breaks, mountain slopes. You can feel the difference.</p>
+        <p class="page-hero__desc">I'm available for commissions, brand collaborations, and regular writing work. I also write a Substack — dispatches from the wild, whenever something is worth saying.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- HIRE + SUBSTACK CTA STRIP -->
+  <div class="cta-strip">
+    <div class="cta-strip__left">
+      <div class="cta-strip__item">
+        <span class="cta-strip__label">Available for</span>
+        <span class="cta-strip__value">Commissions & Brand Work</span>
+      </div>
+      <div class="cta-strip__divider"></div>
+      <div class="cta-strip__item">
+        <span class="cta-strip__label">Follow the writing</span>
+        <span class="cta-strip__value">Substack — Ocean Dreaming</span>
+      </div>
+      <div class="cta-strip__divider"></div>
+      <div class="cta-strip__item">
+        <span class="cta-strip__label">Currently writing from</span>
+        <span class="cta-strip__value">Peru, Amazon Rainforest</span>
+      </div>
+    </div>
+    <div class="cta-strip__btns">
+      <a href="index.html#contact" class="btn btn--ocean">Hire Me →</a>
+      <a href="#substack" class="btn btn--outline">Follow on Substack →</a>
+    </div>
+  </div>
+
+  <!-- FILTER NAV -->
+  <div class="filter-nav">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="travel">Travel</button>
+    <button class="filter-btn" data-filter="science">Science</button>
+    <button class="filter-btn" data-filter="poetry">Poetry</button>
+    <button class="filter-btn" data-filter="essay">Personal Essays</button>
+    <button class="filter-btn" data-filter="brand">Brand Copy</button>
+  </div>
+
+  <!-- WRITING GRID -->
+  <div class="writing-section">
+
+    <!-- TRAVEL WRITING -->
+    <div class="writing-section__category-label">Travel Writing <span>— Places I've actually been</span></div>
+    <div class="writing-grid" id="writingGrid">
+
+      <div class="writing-card writing-card--featured" data-category="travel" onclick="openModal('cornwall')">
+        <div class="writing-card__img"><img src="https://images.unsplash.com/photo-1567591370372-3f8fa46a3d04?w=800&q=80" alt="Cornwall travel" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+        <div class="writing-card__content">
+          <span class="writing-card__tag">Travel Essay</span>
+          <h2 class="writing-card__title">Why This Cornish Beach Still Takes My Breath Away</h2>
+          <p class="writing-card__desc">Five summers as a surf instructor in Polzeath, Cornwall. Flooded tents, sunset pizzas, Saturday mornings with my granny, and sunsets that make you forget your phone exists.</p>
+          <p class="writing-card__excerpt">"The sun and sea dance in a tango of wild love. The light flirts across the waves, turning the sea spray to star drops, as if the night sky had been ripped open."</p>
+          <span class="writing-card__read">Read full essay →</span>
+        </div>
+      </div>
+
+      </div>
+
+      </div>
+
+    </div>
+
+    <!-- SCIENCE COMMUNICATION -->
+    <div class="writing-section__category-label">Science Communication <span>— Complex ideas, human language</span></div>
+    <div class="writing-grid">
+
+      <div class="writing-card writing-card--featured" data-category="science" onclick="openModal('jackapoodles')">
+        <div class="writing-card__img"><img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80" alt="Amazon letters" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+        <div class="writing-card__content">
+          <span class="writing-card__tag">Science Communication</span>
+          <h2 class="writing-card__title">Why Jackapoodles Are Going to Save Our Oceans</h2>
+          <p class="writing-card__desc">Coral bleaching, selective breeding, and why David Attenborough thinks the ocean is our last hope. Complex marine biology made funny, urgent, and worth reading.</p>
+          <p class="writing-card__excerpt">"Imagine being stuck in a hot bath. Forever. Just a full sweat session from hell. You're like a dried-out prune, dizzy, and your rubber duck has melted. That's what it's like for coral right now."</p>
+          <span class="writing-card__read">Read full piece →</span>
+        </div>
+      </div>
+
+      </div>
+
+    </div>
+
+    <!-- POETRY -->
+    <div class="writing-section__category-label">Poetry <span>— Words that make people feel something</span></div>
+    <div class="writing-grid">
+
+      <div class="writing-card writing-card--featured writing-card--poem" data-category="poetry" onclick="openModal('incandescent')">
+        <div class="writing-card__img"><img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&q=80" alt="Jackapoodles" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+        <div class="writing-card__content">
+          <span class="writing-card__tag">Motivation</span>
+          <h2 class="writing-card__title">Be Incandescent</h2>
+          <p class="writing-card__desc">On making yourself magnificent in every tiny thing — the shower, the kitchen, the stars. Written as a letter. Read as a reminder.</p>
+          <p class="writing-card__excerpt">"Shower with gusto. Spread your butter with elegance. Dance in that kitchen with such ferocity the house threatens to dance right alongside you."</p>
+          <span class="writing-card__read">Read poem →</span>
+        </div>
+      </div>
+
+      <div class="writing-card writing-card--poem" data-category="poetry" onclick="openModal('swallow')">
+        <div class="writing-card__img"><img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=800&q=80" alt="Be Incandescent" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+        <div class="writing-card__content">
+          <span class="writing-card__tag">Love</span>
+          <h2 class="writing-card__title">The Swallow</h2>
+          <p class="writing-card__desc">A poem about freedom, joy, and the person who reminds you of a bird cartwheeling across the evening sky.</p>
+          <p class="writing-card__excerpt">"She was freedom incarnate, beautiful elegance mirrored against the evening light..."</p>
+          <span class="writing-card__read">Read poem →</span>
+        </div>
+      </div>
+
+      <div class="writing-card writing-card--poem" data-category="poetry" onclick="openModal('odyssey')">
+        <div class="writing-card__img"><img src="https://images.unsplash.com/photo-1444464666168-49d633b86797?w=800&q=80" alt="The Swallow" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+        <div class="writing-card__content">
+          <span class="writing-card__tag">Motivation</span>
+          <h2 class="writing-card__title">Be an Odyssey</h2>
+          <p class="writing-card__desc">Don't aim to not fail. Dare the earth to rise up and strike you down with the sheer excellence of the life you are living.</p>
+          <p class="writing-card__excerpt">"Don't be a boring book. Be an odyssey."</p>
+          <span class="writing-card__read">Read poem →</span>
+        </div>
+      </div>
+
+      </div>
+
+    </div>
+
+    <!-- PERSONAL ESSAYS -->
+    <div class="writing-section__category-label">Personal Essays <span>— Honest writing from the road</span></div>
+    <div class="writing-grid">
+
+      <div class="writing-card writing-card--featured" data-category="essay" onclick="openModal('adrift')">
+        <div class="writing-card__img"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80" alt="Be an Odyssey" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+        <div class="writing-card__content">
+          <span class="writing-card__tag">Personal Essay</span>
+          <h2 class="writing-card__title">Adrift</h2>
+          <p class="writing-card__desc">On finishing university, drowning in everyone else's advice, and the moment you decide to take the reins back. Written on a ferry to the Isles of Scilly.</p>
+          <p class="writing-card__excerpt">"I feel as if I am adrift and can't work out how to put up my sail. More like the shadows in between the stars at night."</p>
+          <span class="writing-card__read">Read essay →</span>
+        </div>
+      </div>
+
+      </div>
+
+    </div>
+
+    <!-- BRAND COPY -->
+    <div class="writing-section__category-label">Brand Copy <span>— Spec work & samples</span></div>
+    <div class="writing-grid">
+
+      <div class="writing-card" data-category="brand" onclick="openModal('conservation')">
+        <div class="writing-card__img"><img src="https://images.unsplash.com/photo-1500259783852-0ca9ce8a64dc?w=800&q=80" alt="Adrift" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+        <div class="writing-card__content">
+          <span class="writing-card__tag">Campaign Copy — Spec</span>
+          <h2 class="writing-card__title">Marine Conservation — "Look Closer" Campaign</h2>
+          <p class="writing-card__desc">Campaign copy for a marine conservation NGO. The brief: make people care about the ocean who've never seen it.</p>
+          <p class="writing-card__excerpt">"The ocean doesn't need your sympathy. It needs your attention."</p>
+          <span class="writing-card__read">View sample →</span>
+        </div>
+      </div>
+
+      <div class="writing-card" data-category="brand" onclick="openModal('surf')">
+        <div class="writing-card__img"><img src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=800&q=80" alt="Conservation" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+        <div class="writing-card__content">
+          <span class="writing-card__tag">Brand Essay — Spec</span>
+          <h2 class="writing-card__title">Surf Brand — "Why We Surf"</h2>
+          <p class="writing-card__desc">A long-form brand essay for a surf lifestyle company. Part origin story, part manifesto.</p>
+          <p class="writing-card__excerpt">"Nobody teaches you to love the ocean. It just happens one morning, salt in your hair, and suddenly you understand."</p>
+          <span class="writing-card__read">View sample →</span>
+        </div>
+      </div>
+
+      <div class="writing-card" data-category="brand" onclick="openModal('athlete')">
+        <div class="writing-card__img"><img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=800&q=80" alt="Surf brand" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+        <div class="writing-card__content">
+          <span class="writing-card__tag">Campaign Copy — Spec</span>
+          <h2 class="writing-card__title">Athletic Brand — "Don't Just Survive"</h2>
+          <p class="writing-card__desc">Campaign copy for an athletic lifestyle brand. Raw, direct, no fluff.</p>
+          <p class="writing-card__excerpt">"Burn. Set your heart ablaze and show the world you're here to thrive, not just survive."</p>
+          <span class="writing-card__read">View sample →</span>
+        </div>
+      </div>
+
+      <div class="writing-card" data-category="brand" onclick="openModal('growth')">
+        <div class="writing-card__img"><img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?w=800&q=80" alt="Athletic" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+        <div class="writing-card__content">
+          <span class="writing-card__tag">Landing Page — Spec</span>
+          <h2 class="writing-card__title">Personal Growth Brand — Homepage</h2>
+          <p class="writing-card__desc">Spec homepage copy for a personal development brand. The brief: make people feel something before they see a price.</p>
+          <p class="writing-card__excerpt">"You are a half-carved statue. An unfinished work of art. You hold the hammer. You always have."</p>
+          <span class="writing-card__read">View sample →</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SUBSTACK STRIP -->
+  <section class="substack-strip" id="substack">
+    <div class="substack-strip__inner">
+      <div class="substack-strip__text">
+        <p class="substack-strip__title">Ocean Dreaming — The Substack</p>
+        <p class="substack-strip__desc">Poetry, science, travel dispatches and personal essays. Whenever something is worth saying. No schedule, no noise.</p>
+      </div>
+      <div class="substack-strip__form">
+        <input type="email" placeholder="your@email.com" id="substackEmail" />
+        <button class="btn btn--ocean" onclick="subscribeEmail()">Subscribe →</button>
+      </div>
+      <a href="#" class="btn btn--outline">Read on Substack →</a>
+    </div>
+  </section>
+
+  <!-- HIRE ME SECTION -->
+  <section class="hire-section">
+    <div class="hire-section__inner">
+      <div class="hire-section__header">
+        <div>
+          <p class="hire-section__eyebrow">Available for Hire</p>
+          <h2 class="hire-section__title">Need something<br/><em>written well?</em></h2>
+        </div>
+        <div>
+          <p class="hire-section__desc">I write for brands, publications, and organisations in the outdoor, ocean, travel, conservation, and lifestyle space. My science background means I research properly. My life in the field means I write authentically. Turnaround is fast, communication is easy, and I don't miss deadlines.</p>
+        </div>
+      </div>
+      <div class="hire-offerings">
+        <div class="hire-offering">
+          <span class="hire-offering__num">01</span>
+          <div>
+            <h4>UGC & Content Creation</h4>
+            <p>I love to work naturally in the outdoors — ocean, rainforest, mountains, surf breaks. Available globally whilst travelling.</p>
+          </div>
+        </div>
+        <div class="hire-offering">
+          <span class="hire-offering__num">02</span>
+          <div>
+            <h4>Writing & Copywriting</h4>
+            <p>Travel essays, science communication, brand copy, social captions, email sequences. Written from real experience.</p>
+          </div>
+        </div>
+        <div class="hire-offering">
+          <span class="hire-offering__num">03</span>
+          <div>
+            <h4>Brand Partnerships</h4>
+            <p>Long-term collaborations with outdoor, surf, conservation and travel brands whose values align with mine.</p>
+          </div>
+        </div>
+      </div>
+      <div class="hire-section__cta">
+        <a href="index.html#contact" class="btn btn--dark">Get In Touch →</a>
+        <a href="mailto:heyjoekerven@gmail.com" class="btn btn--ocean">heyjoekerven@gmail.com</a>
+        <span class="hire-section__note">Usually responds within 48 hours.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODALS -->
+  <div class="writing-modal" id="modal-cornwall">
+    <div class="writing-modal__inner">
+      <button class="writing-modal__close" onclick="closeModal('cornwall')">✕</button>
+      <div class="writing-modal__img"></div>
+      <div class="writing-modal__body">
+        <span class="writing-modal__tag">Travel Essay — Cornwall</span>
+        <h2 class="writing-modal__title">Why This Cornish Beach Still Takes My Breath Away</h2>
+        <div class="writing-modal__text">
+          <p>I awoke to soft shards of fire drifting through the slash of my open tent flap on the north Cornwall coast. The warmth feels delicious after a cool summer's night, seeping into my tired bones, threatening to pull my sleepy mind back to dreams of the Cornish coastline.</p>
+          <p>Speckled sunlight hung sleepily in the haze of morning dew that clung to the grassy meadow of my campground. I'd never felt so at peace, so alive with energy, as if the buttery sunlight had set my heart ablaze.</p>
+          <p>Cornwall is home to a truly spectacular stretch of coast, dotted with Mediterranean-style beaches, each more "look at the colour of that water" than the last. Polzeath Beach — one of the best surf beaches in Cornwall — is a special place for me. Seventeen-year-old me, A-levels freshly finished, nervous and full of outlandish dreams of pizzas at sunset and surfing like a pro, decided to take the leap and camp there for the summer. I've never looked back.</p>
+          <p>I worked as a surf instructor at Surfs Up Surf School. I adored every second — from battling the strong winds that threatened to rip surfboards out of grasping hands, to dunking over a thousand wetsuits in soapy buckets after each lesson. After five years, I feel as though I've melted into the Kelly's ice creams and beach car park sand.</p>
+          <p>My favourite place to grab dinner was Galleon Café. Saturday mornings there were particularly special — I'd meet my granny at 9am before my first lesson. I'd get a bacon, sausage, and egg sandwich; she, a croissant and cappuccino. We'd sit and chat about everything and nothing. That time is so unbelievably precious, and I feel almost in debt to the magic of Polzeath for granting me it.</p>
+          <p class="writing-modal__pullquote">"The sun and sea dance in a tango of wild love. The light flirts across the waves, turning the sea spray to star drops, as if the night sky had been ripped open and all the stars were tumbling out."</p>
+          <p>Polzeath Beach sunsets are outrageous. All around me, sunset gazers are transfixed — phones forgotten, worries whisked away. I've always believed people are far more beautiful watching the world than worrying about themselves. And here, watching the sun and sea sing, the Polzeath beachgoers have never looked more beautiful.</p>
+          <p>The sun slowly drips into the longing ocean and the sky bleeds colours only seen in dreams. I cannot help but have my breath snatched away. But I would gladly lose my breath to watch another Polzeath sunset one last time.</p>
+          <p><em>— Joe Kerven</em></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="writing-modal" id="modal-jackapoodles">
+    <div class="writing-modal__inner">
+      <button class="writing-modal__close" onclick="closeModal('jackapoodles')">✕</button>
+      <div class="writing-modal__img"></div>
+      <div class="writing-modal__body">
+        <span class="writing-modal__tag">Science Communication</span>
+        <h2 class="writing-modal__title">Why Jackapoodles Are Going to Save Our Oceans</h2>
+        <div class="writing-modal__text">
+          <p>So why does David Attenborough believe our last and only hope to save the planet is the ocean? Because it is dying. And we are killing it, one ChatGPT question at a time.</p>
+          <p>Coral reefs globally are warzones — swathes of desolation littered with the corpses of fallen coral. A coral is made of two interconnected parts: the coral polyp and their endosymbiotic zooxanthellae. Don't freak out — endosymbiont just means an organism living inside their partner in a mutually beneficial relationship. Zooxanthellae are algae that partner with coral, each with their own heat-resistant powers.</p>
+          <p>The reason these brave warriors are collapsing? Heat. "But Joe, I love a hot bath!" Okay, but imagine being stuck in that bath. Forever. Just a full sweat session from hell. You're like a dried-out prune, dizzy, and your rubber duck has melted. That's what it's like for coral right now.</p>
+          <p>At high temperatures, zooxanthellae freak out and start hoarding carbon dioxide — kind of like us panic-buying toilet paper during COVID-19. That hoarding blocks their coral partners from photosynthesising. In desperation the coral casts them out, causing the dreaded bone-white skeletons we see during bleaching. Without photosynthesis, the coral starves to death.</p>
+          <p class="writing-modal__pullquote">"Type D zooxanthellae are big hitters in the heat-resistant scene. Corals partnered with type Ds can withstand temperatures 1.5 degrees higher than current ocean temperatures. Now imagine a Jackapoodle..."</p>
+          <p>That's the plan, says Dr James Guest of Newcastle University. Selectively breed corals — just like we bred Jackapoodles — for heat resistance. Already, selectively bred corals withstand a week longer at extreme temperatures. Pair them with type D zooxanthellae and who knows what they could endure.</p>
+          <p>We're also pulling out 79.3 million tonnes of fish per year. A 2kg female salmon produces ~2,990 eggs. A 3.7kg female produces 4,777. That's called hyperallometry — and it means if we keep fishing out the big ones, we'll end up with nothing but tiddlers.</p>
+          <p>The sea — gentle, raging, continuously shaping our planet. She softly whisks your breath away, slipping between your ribs and carving her name upon the wall of your heart. She's burning, writhing in the grips of the destruction we have wrought upon her.</p>
+          <p>It's now or never. Let's do something about it.</p>
+          <p><em>— Joe Kerven, marine scientist and conservation writer</em></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="writing-modal writing-modal--poem" id="modal-incandescent">
+    <div class="writing-modal__inner">
+      <button class="writing-modal__close" onclick="closeModal('incandescent')">✕</button>
+      <div class="writing-modal__img"></div>
+      <div class="writing-modal__body">
+        <span class="writing-modal__tag">Poetry — Motivation</span>
+        <h2 class="writing-modal__title">Be Incandescent</h2>
+        <p class="writing-modal__poem">The future isn't fixed in stone.
+It simply hasn't been written yet.
+
+What changes your future
+is what you do now.
+
+Make yourself magnificent
+in every tiny thing you do.
+
+Shower with gusto.
+
+Spread your butter with elegance.
+
+Dance in that kitchen
+with such ferocity
+the house threatens
+to dance right alongside you.
+
+Keep your eyes on the stars, fool.
+You're shining too bright
+to be dimmed by clouds.
+
+<em>Be incandescent.</em></p>
+        <span class="writing-modal__author">— Joe Kerven</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="writing-modal writing-modal--poem" id="modal-swallow">
+    <div class="writing-modal__inner">
+      <button class="writing-modal__close" onclick="closeModal('swallow')">✕</button>
+      <div class="writing-modal__img"></div>
+      <div class="writing-modal__body">
+        <span class="writing-modal__tag">Poetry — Love</span>
+        <h2 class="writing-modal__title">The Swallow</h2>
+        <p class="writing-modal__poem">I saw a swallow today.
+She reminded me of you.
+
+Her endless joy in dancing with the wind,
+the way she cartwheels across the sky,
+never tied to any earthly bounds.
+She was freedom incarnate,
+beautiful elegance mirrored against the evening light.
+
+A male flew up to join her,
+their chittered greetings reverberated across my heart —
+such excitement at seeing each other again.
+
+His tail streamers fluttered behind him,
+like the broken strings of a kite.
+As if her flying started his heart
+and called him to dance with her.
+
+They climbed higher and higher,
+black kisses against a sunstroke canvas.
+Each arced across the other,
+stitching the sky with invisible thread.
+
+The wind sung
+and the birds revelled
+in the simple joy
+of sharing the sky together.</p>
+        <span class="writing-modal__author">— Joe Kerven</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="writing-modal writing-modal--poem" id="modal-odyssey">
+    <div class="writing-modal__inner">
+      <button class="writing-modal__close" onclick="closeModal('odyssey')">✕</button>
+      <div class="writing-modal__img"></div>
+      <div class="writing-modal__body">
+        <span class="writing-modal__tag">Poetry — Motivation</span>
+        <h2 class="writing-modal__title">Be an Odyssey</h2>
+        <p class="writing-modal__poem">Don't be a boring book.
+Be an odyssey.
+
+Dare the very earth to rise up and strike you down
+with the sheer excellence of the life you are living.
+
+Full potential? There's no such thing.
+Push past your limits.
+Push past any potential you may have had.
+Smash your barriers.
+
+How dare we just aim to be okay.
+How dare we strive for mediocre.
+
+Try so hard the earth shakes with your stride
+and the trees bow at your passing.
+
+Burn.
+Set your heart ablaze
+and show the world you're here to thrive,
+not just survive.
+
+Too many of us drift along in the shadows.
+
+Be the blazing torch in the darkness.
+
+Rise up.
+
+Your story will bring gasps of delight
+to all that read it.
+
+<em>Don't be a boring book.
+Be an odyssey.</em></p>
+        <span class="writing-modal__author">— Joe Kerven</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="writing-modal" id="modal-adrift">
+    <div class="writing-modal__inner">
+      <button class="writing-modal__close" onclick="closeModal('adrift')">✕</button>
+      <div class="writing-modal__img"></div>
+      <div class="writing-modal__body">
+        <span class="writing-modal__tag">Personal Essay</span>
+        <h2 class="writing-modal__title">Adrift</h2>
+        <div class="writing-modal__text">
+          <p>I feel as if I am adrift and can't work out how to put up my sail. I wouldn't say a dark place as such — more like the shadows in between the stars at night.</p>
+          <p>You finish university and are plagued with adult advice. "Get a career." "Stay away from a full-time job for as long as possible." "Save your money." "Go be free, you'll never be this young again." "Start a business." "Don't start a business."</p>
+          <p>I'm drowning in life's pressures. And I haven't been following my own advice. I am no longer enjoying the little things. All closed up like a clam.</p>
+          <p>My honest belief is that I need to live life a bit. Work in different places. See new things. Try different experiences. I am young and I will not be foolish and waste this life.</p>
+          <p class="writing-modal__pullquote">"I've got to start taking the reins of life — otherwise I'm going to be taken for a ride rather than be the rider."</p>
+          <p>I look around at people and see that no one can do anything active. Everyone's got bad backs and are moving through the world as if it owes them stillness. I refuse to believe that destroying my young body to live happily at 50 is right.</p>
+          <p>So this is it. I need to wake up. And so I did.</p>
+          <p><em>— Joe Kerven, written on the Scillonian ferry, somewhere in the Atlantic</em></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="writing-modal" id="modal-conservation">
+    <div class="writing-modal__inner">
+      <button class="writing-modal__close" onclick="closeModal('conservation')">✕</button>
+      <div class="writing-modal__img"></div>
+      <div class="writing-modal__body">
+        <span class="writing-modal__tag">Campaign Copy — Spec Work</span>
+        <h2 class="writing-modal__title">"Look Closer" — Marine Conservation Campaign</h2>
+        <div class="writing-modal__text">
+          <p><strong>The ocean doesn't need your sympathy. It needs your attention.</strong></p>
+          <p>Most people have never been underwater. They've seen the documentaries, the drone shots, the bleached coral on the news. They feel bad for a moment and then scroll on.</p>
+          <p>We don't want your guilt. We want your eyes.</p>
+          <p>Because the moment you actually look — really look — at what lives beneath the surface, something changes. You can't unsee a shark nursery. You can't unfeel the cold Atlantic water. You can't unlearn what a healthy reef sounds like versus a dying one.</p>
+          <p class="writing-modal__pullquote">"Look closer. Stay longer. Come back changed."</p>
+          <p>We're not asking you to save the ocean. We're asking you to meet it. The rest tends to follow.</p>
+          <p><em>Join [Organisation]. Because the ocean is worth more than a moment of your feed.</em></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="writing-modal" id="modal-surf">
+    <div class="writing-modal__inner">
+      <button class="writing-modal__close" onclick="closeModal('surf')">✕</button>
+      <div class="writing-modal__img"></div>
+      <div class="writing-modal__body">
+        <span class="writing-modal__tag">Brand Essay — Spec Work</span>
+        <h2 class="writing-modal__title">"Why We Surf" — Brand Essay</h2>
+        <div class="writing-modal__text">
+          <p>Nobody teaches you to love the ocean. It just happens one morning, salt in your hair and sand in your wetsuit, and suddenly you understand what all the fuss was about.</p>
+          <p>It's not the waves. Well — it is the waves. But it's also the 5am alarm you don't need because you're already awake. It's the cold car park and the wet changing mat and the flask of bad coffee that somehow tastes incredible. It's the person next to you in the line-up who you've never met but already understand.</p>
+          <p>Surfing doesn't make you better than anyone. It just makes you better than you were yesterday — more patient, more present, more willing to sit in the cold and wait for something worth riding.</p>
+          <p class="writing-modal__pullquote">"The ocean has a way of putting things in order. Problems that felt enormous on land have a habit of shrinking to the right size out there."</p>
+          <p>We started [Brand] because we believed the world needed more of that feeling. Not just on the water. In the way you move, the way you think, the way you show up.</p>
+          <p>That's what we make gear for. Not performance. Not aesthetics. The feeling of being exactly where you're supposed to be.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="writing-modal" id="modal-athlete">
+    <div class="writing-modal__inner">
+      <button class="writing-modal__close" onclick="closeModal('athlete')">✕</button>
+      <div class="writing-modal__img"></div>
+      <div class="writing-modal__body">
+        <span class="writing-modal__tag">Campaign Copy — Spec Work</span>
+        <h2 class="writing-modal__title">"Don't Just Survive" — Athletic Brand Campaign</h2>
+        <div class="writing-modal__text">
+          <p><strong>Burn.</strong></p>
+          <p>Set your heart ablaze and show the world you're here to thrive — not just survive.</p>
+          <p>Too many people drift along in the shadows. Moving through their days, ticking boxes, training just enough to feel like they're doing something. That's not living. That's waiting.</p>
+          <p>We build gear for people who've decided to stop waiting. People who train not to look good in the mirror but to be ready — for the mountain, the wave, the race, the moment that asks everything of them.</p>
+          <p class="writing-modal__pullquote">"Try so hard the earth shakes with your stride and the trees bow at your passing."</p>
+          <p>Your body is a tool. Craft it. Use it. Don't let it rust. Be the blazing torch in the darkness.</p>
+          <p><em>[Brand]. Built for people who mean it.</em></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="writing-modal" id="modal-growth">
+    <div class="writing-modal__inner">
+      <button class="writing-modal__close" onclick="closeModal('growth')">✕</button>
+      <div class="writing-modal__img"></div>
+      <div class="writing-modal__body">
+        <span class="writing-modal__tag">Landing Page — Spec Work</span>
+        <h2 class="writing-modal__title">Personal Growth Brand — Homepage Copy</h2>
+        <div class="writing-modal__text">
+          <p><strong>You are a half-carved statue.</strong></p>
+          <p>An unfinished work of art. And that's exactly as it should be.</p>
+          <p>It's not failure that defeats you. It's the fear of picking up the chisel. The worry that if you try — really try — and still fall short, then what does that say about you?</p>
+          <p>Here's what it says: you're human. And humans who try hard enough to fail spectacularly are the only ones who ever become something worth remembering.</p>
+          <p>You hold the hammer. You always have.</p>
+          <p class="writing-modal__pullquote">"Don't aim to not fail. Dare the earth to rise up and strike you down with the sheer excellence of the life you're living."</p>
+          <p>This isn't a programme. It's a decision. The decision to stop drifting and start carving.</p>
+          <p><em>Start becoming. →</em></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__logo">Joe Kerven</div>
+    <a href="index.html" class="footer__back">← Back to main site</a>
+  </footer>
+
+  <script>
+    // Filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const allCards = document.querySelectorAll('.writing-card');
+    const categoryLabels = document.querySelectorAll('.writing-section__category-label');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        allCards.forEach(card => {
+          card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
+        });
+        // Hide empty category labels
+        document.querySelectorAll('.writing-grid').forEach(grid => {
+          const visibleCards = grid.querySelectorAll('.writing-card:not([style*="display: none"])');
+          const label = grid.previousElementSibling;
+          if (label && label.classList.contains('writing-section__category-label')) {
+            label.style.display = visibleCards.length === 0 ? 'none' : '';
+          }
+          grid.style.display = visibleCards.length === 0 ? 'none' : '';
+        });
+      });
+    });
+
+    // Modal
+    function openModal(id) {
+      const modal = document.getElementById('modal-' + id);
+      if (modal) { modal.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    }
+    function closeModal(id) {
+      const modal = document.getElementById('modal-' + id);
+      if (modal) { modal.classList.remove('open'); document.body.style.overflow = ''; }
+    }
+    document.querySelectorAll('.writing-modal').forEach(modal => {
+      modal.addEventListener('click', e => {
+        if (e.target === modal) { modal.classList.remove('open'); document.body.style.overflow = ''; }
+      });
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.writing-modal.open').forEach(m => {
+          m.classList.remove('open'); document.body.style.overflow = '';
+        });
+      }
+    });
+
+    // Newsletter
+    function subscribeEmail() {
+      const input = document.getElementById('substackEmail');
+      const btn = document.querySelector('.signup-form .btn');
+      if (input && input.value.includes('@')) {
+        btn.textContent = "You're in ✓";
+        btn.style.background = '#1a5c6e';
+        input.value = '';
+        setTimeout(() => { btn.textContent = 'Subscribe →'; btn.style.background = ''; }, 3000);
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Joe Kerven is a marine scientist, UGC content creator, copywriter and poet. First Class Conservation Biology graduate, PADI Rescue Diver, surf instructor. Based wherever the ocean takes him." />
+  <meta name="keywords" content="Joe Kerven, UGC creator, marine scientist, ocean content creator, copywriter, surf instructor, conservation biology" />
+  <meta name="author" content="Joe Kerven" />
+  <meta property="og:title" content="Joe Kerven — Marine Scientist, Ocean Creator & Writer" />
+  <meta property="og:description" content="Joe Kerven is a marine scientist, UGC content creator, copywriter and poet. First Class Conservation Biology graduate, PADI Rescue Diver, surf instructor. Based wherever the ocean takes him." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Joe Kerven — Marine Scientist, Ocean Creator & Writer" />
+  <meta name="twitter:description" content="Joe Kerven is a marine scientist, UGC content creator, copywriter and poet. First Class Conservation Biology graduate, PADI Rescue Diver, surf instructor. Based wherever the ocean takes him." />
+  <title>Joe Kerven — Marine Scientist, Ocean Creator & Writer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <style>
+/* ============================================
+   JOE KERVEN — Personal Brand Website v2
+   Concept: The person IS the brand
+   Aesthetic: Ocean / Editorial / Cinematic
+   ============================================ */
+
+:root {
+  --cream: #F5F0E8;
+  --cream-dark: #EDE6D6;
+  --charcoal: #1A1A18;
+  --charcoal-mid: #2E2E2C;
+  --ocean: #2A6B7C;
+  --ocean-light: #5A9BAB;
+  --ocean-pale: #C2D8DE;
+  --sand: #B8A88A;
+  --sand-light: #E8DFD0;
+  --white: #FFFFFF;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'DM Sans', sans-serif;
+  --transition: 0.3s ease;
+  --max: 1280px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-sans); background: var(--cream); color: var(--charcoal); overflow-x: hidden; line-height: 1.6; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button { cursor: pointer; border: none; background: none; font-family: var(--font-sans); }
+input, select, textarea { font-family: var(--font-sans); }
+
+/* ===== PLACEHOLDERS ===== */
+.img-placeholder {
+  background: #C8D8DC;
+  background-image: radial-gradient(ellipse at 25% 35%, rgba(42,107,124,0.25) 0%, transparent 60%), radial-gradient(ellipse at 75% 65%, rgba(90,155,171,0.2) 0%, transparent 60%);
+  position: relative; overflow: hidden;
+}
+.img-placeholder::after {
+  content: '[ your photo ]';
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(26,26,24,0.3);
+}
+.video-placeholder {
+  background: #0D2B35;
+  background-image: radial-gradient(ellipse at 30% 40%, rgba(42,107,124,0.5) 0%, transparent 55%);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden; cursor: pointer;
+}
+
+/* ===== TYPOGRAPHY ===== */
+.section-eyebrow {
+  font-size: 0.68rem; font-weight: 500; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--ocean); margin-bottom: 1rem;
+}
+.section-title {
+  font-family: var(--font-serif); font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 400; line-height: 1.12; color: var(--charcoal);
+}
+.section-title em { font-style: italic; color: var(--ocean); }
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-block; padding: 0.85rem 2rem; font-size: 0.8rem; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase; transition: var(--transition); cursor: pointer;
+}
+.btn--dark { background: var(--charcoal); color: var(--cream); }
+.btn--dark:hover { background: var(--charcoal-mid); }
+.btn--light { background: var(--cream); color: var(--charcoal); }
+.btn--light:hover { background: var(--sand-light); }
+.btn--outline-light { background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,0.5); }
+.btn--outline-light:hover { background: rgba(255,255,255,0.1); border-color: white; }
+.btn--sage { background: var(--ocean); color: var(--white); }
+.btn--sage:hover { background: var(--ocean-light); }
+.btn--full { width: 100%; text-align: center; display: block; }
+
+/* ===== NAV ===== */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.75rem 4rem; transition: all 0.4s ease;
+}
+.nav.scrolled {
+  background: rgba(245,240,232,0.96); backdrop-filter: blur(12px);
+  padding: 1rem 4rem; box-shadow: 0 1px 20px rgba(26,26,24,0.08);
+}
+.nav__logo {
+  font-family: var(--font-serif); font-size: 1.3rem; font-weight: 400;
+  color: var(--white); transition: color 0.3s; letter-spacing: 0.08em;
+}
+.nav.scrolled .nav__logo { color: var(--charcoal); }
+.nav__links { display: flex; align-items: center; gap: 2.5rem; }
+.nav__links a {
+  font-size: 0.75rem; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(255,255,255,0.8); transition: color var(--transition);
+}
+.nav.scrolled .nav__links a { color: var(--charcoal); }
+.nav__links a:hover { color: var(--ocean-light) !important; }
+.nav__cta { background: var(--ocean) !important; color: white !important; padding: 0.55rem 1.3rem; }
+.nav__cta:hover { background: var(--ocean-light) !important; }
+.nav__burger { display: none; flex-direction: column; gap: 5px; }
+.nav__burger span { display: block; width: 24px; height: 1.5px; background: white; transition: var(--transition); }
+.nav.scrolled .nav__burger span { background: var(--charcoal); }
+
+/* ===== MOBILE MENU ===== */
+.mobile-menu {
+  position: fixed; inset: 0; background: var(--charcoal); z-index: 99;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+}
+.mobile-menu.open { opacity: 1; pointer-events: all; }
+.mobile-menu__close {
+  position: absolute; top: 2rem; right: 2rem; color: white; font-size: 1.5rem;
+  background: none; border: none; cursor: pointer;
+}
+.mobile-menu ul { display: flex; flex-direction: column; align-items: center; gap: 2.5rem; }
+.mobile-menu a { font-family: var(--font-serif); font-size: 2.5rem; color: var(--cream); transition: color var(--transition); }
+.mobile-menu a:hover { color: var(--ocean-light); }
+
+/* ===== HERO ===== */
+.hero {
+  position: relative; min-height: 100vh; display: flex; flex-direction: column;
+  justify-content: center; overflow: hidden;
+}
+.hero__bg { position: absolute; inset: 0; }
+.hero__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero__video-fallback {
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, #0A1F28 0%, #0D3040 30%, #1A5C70 60%, #0D3040 100%);
+}
+.hero__overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(10,20,25,0.4) 0%, rgba(10,20,25,0.15) 45%, rgba(10,20,25,0.65) 100%);
+}
+.hero__content {
+  position: relative; z-index: 2; padding: 14rem 4rem 6rem; max-width: 900px;
+}
+.hero__headline {
+  font-family: var(--font-serif); font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-weight: 300; line-height: 1.05; color: var(--white);
+  margin-bottom: 1.25rem; animation: fadeUp 1s ease both;
+}
+.hero__headline em { font-style: italic; color: var(--ocean-light); }
+.hero__identity {
+  font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: rgba(255,255,255,0.65); margin-bottom: 0.6rem; font-weight: 400;
+  animation: fadeUp 1s 0.15s ease both;
+}
+.hero__location {
+  font-family: var(--font-serif); font-style: italic; font-size: 1rem;
+  color: var(--ocean-light); margin-bottom: 2.5rem;
+  animation: fadeUp 1s 0.25s ease both;
+}
+.hero__ctas { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeUp 1s 0.35s ease both; }
+.hero__scroll-hint {
+  position: absolute; bottom: 8rem; right: 4rem; z-index: 2;
+  animation: fadeIn 1.5s 1s ease both;
+}
+.hero__scroll-line {
+  width: 1px; height: 80px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.5), transparent);
+  animation: scrollLine 2s ease infinite;
+}
+.hero__location-bar {
+  position: absolute; bottom: 0; left: 0; right: 0; z-index: 2;
+  background: rgba(10,20,25,0.75); backdrop-filter: blur(10px);
+  padding: 1.25rem 4rem; animation: fadeIn 1.5s 0.6s ease both;
+}
+.hero__journey { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
+.journey__label {
+  font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+}
+.journey__stops { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+.journey__stop {
+  font-size: 0.8rem; color: rgba(255,255,255,0.5);
+  letter-spacing: 0.05em; transition: color var(--transition);
+}
+.journey__stop--active { color: var(--ocean-light); font-weight: 500; }
+.journey__arrow { color: rgba(255,255,255,0.2); font-size: 0.8rem; }
+
+/* ===== ABOUT ===== */
+.about {
+  display: grid; grid-template-columns: 1fr 1fr; min-height: 90vh; background: var(--cream);
+}
+.about__img-col {
+  position: relative; padding: 6rem 3rem 5rem 4rem;
+  display: flex; flex-direction: column; gap: 1.5rem;
+}
+.about__img-main { flex: 1; min-height: 420px; border-radius: 2px; }
+.about__img-small { height: 200px; width: 60%; align-self: flex-end; border-radius: 2px; }
+.about__pull-quote {
+  padding: 1.5rem; border-left: 2px solid var(--ocean-pale);
+  background: var(--cream-dark);
+}
+.about__pull-quote p {
+  font-family: var(--font-serif); font-style: italic; font-size: 1rem;
+  line-height: 1.7; color: var(--charcoal);
+}
+.about__pull-quote span {
+  display: block; margin-top: 0.75rem; font-size: 0.7rem;
+  letter-spacing: 0.15em; text-transform: uppercase; color: var(--ocean);
+}
+.about__text-col {
+  padding: 6rem 4rem 5rem 3rem; display: flex; flex-direction: column;
+  justify-content: center; gap: 1.5rem;
+}
+.about__body { font-size: 1.05rem; line-height: 1.9; color: var(--charcoal-mid); font-weight: 300; }
+.about__tags {
+  display: flex; flex-wrap: wrap; gap: 0.6rem; padding: 1.5rem 0;
+  border-top: 1px solid var(--sand-light); border-bottom: 1px solid var(--sand-light);
+}
+.about__tags span {
+  font-size: 0.75rem; padding: 0.4rem 0.9rem; background: var(--ocean-pale);
+  color: var(--ocean); letter-spacing: 0.05em;
+}
+
+/* ===== STATS STRIP ===== */
+.stats-strip { background: var(--charcoal); padding: 0; }
+.stats-strip__inner {
+  display: grid; grid-template-columns: repeat(6, 1fr); max-width: var(--max); margin: 0 auto;
+}
+.strip-stat {
+  padding: 2.5rem 2rem; display: flex; flex-direction: column; gap: 0.3rem;
+  border-right: 1px solid rgba(255,255,255,0.06); transition: background var(--transition);
+}
+.strip-stat:last-child { border-right: none; }
+.strip-stat:hover { background: var(--charcoal-mid); }
+.strip-stat__num {
+  font-family: var(--font-serif); font-size: 2.4rem; font-weight: 300;
+  color: var(--ocean-light); line-height: 1;
+}
+.strip-stat__label { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(245,240,232,0.4); }
+
+/* ===== CONTENT SECTION ===== */
+.content-section { padding: 7rem 4rem; background: var(--cream-dark); }
+.content-section__header { max-width: 700px; margin-bottom: 4rem; }
+.content-section__sub {
+  font-family: var(--font-serif); font-style: italic; font-size: 1.1rem;
+  color: var(--sand); margin-top: 1rem; line-height: 1.7;
+}
+.ugc-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;
+  max-width: var(--max); margin-bottom: 3rem; align-items: start;
+}
+.ugc-item--large { grid-column: span 2; }
+.ugc-item__embed { width: 100%; }
+.ugc-item__embed blockquote { margin: 0 auto !important; }
+.ugc-item__placeholder { width: 100%; aspect-ratio: 9/16; border-radius: 2px; }
+.ugc-item__placeholder .play-btn {
+  width: 52px; height: 52px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center;
+  color: white; font-size: 0.9rem; backdrop-filter: blur(4px);
+}
+.ugc-item__tag {
+  position: absolute; top: 1rem; left: 1rem; background: rgba(10,20,25,0.7);
+  color: var(--ocean-light); font-size: 0.65rem; letter-spacing: 0.12em;
+  text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: 20px;
+}
+.ugc-item__info { padding: 1rem 0; }
+.ugc-tag {
+  font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--ocean); display: block; margin-bottom: 0.4rem;
+}
+.ugc-item__info p { font-size: 0.85rem; color: var(--charcoal-mid); font-weight: 300; line-height: 1.6; }
+.content-section__cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+/* ===== WRITING SECTION ===== */
+.writing-section { background: var(--charcoal); padding: 7rem 4rem; }
+.writing-section__inner {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 6rem;
+  max-width: var(--max); margin: 0 auto; align-items: start;
+}
+.writing-section__left .section-eyebrow { color: var(--ocean-light); }
+.writing-section__left .section-title { color: var(--cream); }
+.writing-section__left .section-title em { color: var(--ocean-light); }
+.writing-intro {
+  font-size: 0.95rem; line-height: 1.9; color: rgba(245,240,232,0.6);
+  font-weight: 300; margin: 1.5rem 0;
+}
+.writing-tabs { margin-top: 0; }
+.writing-tabs__nav { display: flex; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 2rem; }
+.tab-btn {
+  padding: 0.75rem 1.5rem; font-size: 0.75rem; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,240,232,0.4);
+  border-bottom: 2px solid transparent; margin-bottom: -1px; transition: var(--transition);
+}
+.tab-btn--active { color: var(--ocean-light); border-bottom-color: var(--ocean-light); }
+.tab-content { display: none; }
+.tab-content--active { display: block; }
+.poem-card {
+  background: rgba(255,255,255,0.04); padding: 2.5rem; border-left: 2px solid var(--ocean);
+  margin-bottom: 1.5rem;
+}
+.poem-text {
+  font-family: var(--font-serif); font-size: 1.05rem; line-height: 2;
+  color: rgba(245,240,232,0.85); white-space: pre-line;
+}
+.poem-text em { font-style: italic; color: var(--ocean-light); }
+.poem-credit {
+  display: block; margin-top: 1.5rem; font-size: 0.75rem;
+  letter-spacing: 0.15em; text-transform: uppercase; color: var(--ocean-light);
+}
+.writing-link {
+  font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--ocean-light); border-bottom: 1px solid rgba(90,155,171,0.3);
+  padding-bottom: 2px; transition: var(--transition);
+}
+.writing-link:hover { color: var(--white); border-color: white; }
+.copy-samples { display: flex; flex-direction: column; gap: 1rem; }
+.copy-card { background: rgba(255,255,255,0.04); padding: 1.75rem; }
+.copy-tag {
+  font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--ocean-light); display: block; margin-bottom: 0.5rem;
+}
+.copy-card h4 {
+  font-family: var(--font-serif); font-size: 1.2rem; font-weight: 400;
+  color: var(--cream); margin-bottom: 0.5rem;
+}
+.copy-card p { font-size: 0.85rem; color: rgba(245,240,232,0.5); line-height: 1.7; margin-bottom: 1rem; }
+
+/* ===== JOURNAL ===== */
+.journal { background: var(--cream); padding: 7rem 4rem; }
+.journal__header { max-width: 600px; margin-bottom: 4rem; }
+.journal__sub { font-family: var(--font-serif); font-style: italic; font-size: 1.1rem; color: var(--sand); margin-top: 1rem; }
+.journal__grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+  max-width: var(--max); margin-bottom: 4rem;
+}
+.journal-card { background: var(--cream-dark); overflow: hidden; transition: transform var(--transition); }
+.journal-card:hover { transform: translateY(-4px); }
+.journal-card--featured { grid-row: span 2; display: flex; flex-direction: column; }
+.journal-card__img { height: 240px; }
+.journal-card--featured .journal-card__img { height: 320px; }
+.journal-card__content { padding: 2rem; flex: 1; display: flex; flex-direction: column; gap: 0.75rem; }
+.journal-tag {
+  font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--ocean); background: var(--ocean-pale); padding: 0.25rem 0.75rem;
+  display: inline-block;
+}
+.journal-card__content h3 { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 400; line-height: 1.3; }
+.journal-card__content p { font-size: 0.9rem; line-height: 1.8; color: var(--charcoal-mid); font-weight: 300; flex: 1; }
+.journal-link {
+  font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--ocean); transition: var(--transition); margin-top: auto;
+}
+.journal-link:hover { color: var(--charcoal); }
+.journal__newsletter {
+  background: var(--charcoal); padding: 3.5rem 4rem; max-width: var(--max);
+}
+.journal__newsletter-inner { display: flex; align-items: center; justify-content: space-between; gap: 3rem; flex-wrap: wrap; }
+.journal__newsletter h3 { font-family: var(--font-serif); font-size: 1.8rem; font-weight: 400; color: var(--cream); margin-bottom: 0.5rem; }
+.journal__newsletter p { font-size: 0.9rem; color: rgba(245,240,232,0.5); font-weight: 300; }
+.newsletter-form { display: flex; gap: 0; flex-shrink: 0; }
+.newsletter-form input {
+  padding: 0.85rem 1.25rem; border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.06); color: var(--cream); font-size: 0.9rem;
+  outline: none; width: 280px; transition: border-color var(--transition);
+}
+.newsletter-form input:focus { border-color: var(--ocean-light); }
+.newsletter-form input::placeholder { color: rgba(245,240,232,0.3); }
+.newsletter-form .btn { border-radius: 0; }
+
+/* ===== WORK WITH ME ===== */
+.work { background: var(--cream-dark); padding: 7rem 4rem; }
+.work__header { max-width: 600px; margin-bottom: 4rem; }
+.work__cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: var(--sand-light); }
+.work-card { background: var(--cream); overflow: hidden; transition: var(--transition); }
+.work-card:hover { background: var(--cream-dark); }
+.work-card__img { height: 220px; }
+.work-card__content { padding: 2.5rem; }
+.work-card__num {
+  font-family: var(--font-serif); font-size: 3.5rem; font-weight: 300;
+  color: var(--ocean-pale); display: block; margin-bottom: 0.75rem; line-height: 1;
+}
+.work-card__content h3 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 400; margin-bottom: 1rem; line-height: 1.2; }
+.work-card__content p { font-size: 0.9rem; line-height: 1.8; color: var(--charcoal-mid); font-weight: 300; margin-bottom: 1.5rem; }
+.work-card__content ul { margin-bottom: 2rem; }
+.work-card__content li {
+  font-size: 0.83rem; color: var(--charcoal-mid); padding: 0.4rem 0;
+  border-bottom: 1px solid var(--sand-light); padding-left: 1rem; position: relative;
+}
+.work-card__content li::before { content: '—'; position: absolute; left: 0; color: var(--ocean); }
+
+/* ===== CONTACT ===== */
+.contact { display: grid; grid-template-columns: 1fr 1fr; min-height: 80vh; }
+.contact__left {
+  padding: 6rem 4rem; background: var(--charcoal);
+  display: flex; flex-direction: column; gap: 1.5rem; justify-content: center;
+}
+.contact__left .section-eyebrow { color: var(--ocean-light); }
+.contact__left .section-title { color: var(--cream); }
+.contact__left .section-title em { color: var(--ocean-light); }
+.contact__body { font-size: 0.95rem; line-height: 1.9; color: rgba(245,240,232,0.6); font-weight: 300; }
+.contact__details { display: flex; flex-direction: column; gap: 1rem; }
+.contact__email {
+  font-family: var(--font-serif); font-size: 1.1rem; color: var(--ocean-light);
+  border-bottom: 1px solid rgba(90,155,171,0.3); padding-bottom: 0.25rem;
+  align-self: flex-start; transition: var(--transition);
+}
+.contact__email:hover { color: var(--white); border-color: white; }
+.contact__socials { display: flex; gap: 1.5rem; }
+.contact__socials a {
+  font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase;
+  color: rgba(245,240,232,0.4); transition: color var(--transition);
+}
+.contact__socials a:hover { color: var(--ocean-light); }
+.contact__img { height: 200px; margin-top: 1rem; }
+.contact__right { padding: 6rem 4rem; background: var(--cream-dark); display: flex; flex-direction: column; justify-content: center; }
+.contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
+.form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+.form-group label { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--charcoal-mid); font-weight: 500; }
+.form-group input, .form-group select, .form-group textarea {
+  padding: 0.85rem 1rem; border: 1px solid var(--sand-light); background: var(--cream);
+  color: var(--charcoal); outline: none; transition: border-color var(--transition);
+  font-weight: 300; font-size: 0.95rem; border-radius: 2px; width: 100%;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--ocean); }
+.form-group textarea { resize: vertical; }
+
+/* ===== FOOTER ===== */
+.footer { background: var(--charcoal); padding: 4rem; }
+.footer__top {
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 3rem;
+  padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.07); margin-bottom: 2rem;
+}
+.footer__logo { font-family: var(--font-serif); font-size: 1.6rem; color: var(--cream); font-weight: 300; margin-bottom: 0.75rem; }
+.footer__tagline { font-family: var(--font-serif); font-style: italic; font-size: 0.9rem; color: rgba(245,240,232,0.35); line-height: 1.6; }
+.footer__links, .footer__socials { display: flex; flex-direction: column; gap: 0.75rem; }
+.footer__links a, .footer__socials a {
+  font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(245,240,232,0.4); transition: color var(--transition);
+}
+.footer__links a:hover, .footer__socials a:hover { color: var(--ocean-light); }
+.footer__bottom { display: flex; justify-content: space-between; align-items: center; }
+.footer__bottom p { font-size: 0.72rem; color: rgba(245,240,232,0.25); letter-spacing: 0.08em; }
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes scrollLine {
+  0% { transform: scaleY(0); transform-origin: top; opacity: 1; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  51% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+}
+.reveal { opacity: 0; transform: translateY(35px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .nav { padding: 1.25rem 2rem; }
+  .nav.scrolled { padding: 0.9rem 2rem; }
+  .nav__links { display: none; }
+  .nav__burger { display: flex; }
+  .hero__content { padding: 10rem 2rem 5rem; }
+  .hero__scroll-hint { display: none; }
+  .hero__location-bar { padding: 1rem 2rem; }
+  .about { grid-template-columns: 1fr; }
+  .about__img-col { padding: 4rem 2rem 2rem; }
+  .about__text-col { padding: 2rem 2rem 4rem; }
+  .stats-strip__inner { grid-template-columns: repeat(3, 1fr); }
+  .content-section { padding: 5rem 2rem; }
+  .ugc-grid { grid-template-columns: repeat(2, 1fr); }
+  .ugc-item--large { grid-column: span 2; }
+  .writing-section { padding: 5rem 2rem; }
+  .writing-section__inner { grid-template-columns: 1fr; gap: 3rem; }
+  .journal { padding: 5rem 2rem; }
+  .journal__grid { grid-template-columns: 1fr; }
+  .journal-card--featured { grid-row: span 1; }
+  .journal__newsletter { padding: 2.5rem 2rem; }
+  .journal__newsletter-inner { flex-direction: column; align-items: flex-start; }
+  .newsletter-form { width: 100%; }
+  .newsletter-form input { flex: 1; width: auto; }
+  .work { padding: 5rem 2rem; }
+  .work__cards { grid-template-columns: 1fr; }
+  .contact { grid-template-columns: 1fr; }
+  .contact__left { padding: 4rem 2rem; }
+  .contact__right { padding: 4rem 2rem; }
+  .footer { padding: 3rem 2rem; }
+  .footer__top { grid-template-columns: 1fr; gap: 2rem; }
+  .footer__bottom { flex-direction: column; gap: 0.75rem; text-align: center; }
+}
+@media (max-width: 640px) {
+  .hero__headline { font-size: clamp(2.8rem, 12vw, 4rem); }
+  .hero__ctas { flex-direction: column; align-items: flex-start; }
+  .stats-strip__inner { grid-template-columns: repeat(2, 1fr); }
+  .ugc-grid { grid-template-columns: 1fr; }
+  .ugc-item--large { grid-column: span 1; }
+  .about__tags { gap: 0.4rem; }
+  .journey__stops { gap: 0.4rem; }
+  .journey__stop { font-size: 0.7rem; }
+}
+
+/* ===== HERO VIDEO CAROUSEL ===== */
+.hero__video-carousel {
+  position: absolute; inset: 0; overflow: hidden;
+}
+.hero__video-carousel video {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; opacity: 0; transition: opacity 1.5s ease;
+}
+.hero__video-carousel video.active { opacity: 1; }
+
+/* ===== UGC DEDICATED SECTION ===== */
+.ugc-section { background: var(--charcoal); padding: 7rem 4rem; }
+.ugc-section__inner { max-width: var(--max); margin: 0 auto; }
+.ugc-section__header { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; margin-bottom: 5rem; }
+.ugc-section__title-col .section-eyebrow { color: var(--ocean-light); }
+.ugc-section__title-col .section-title { color: var(--cream); }
+.ugc-section__title-col .section-title em { color: var(--ocean-light); }
+.ugc-section__desc { font-size: 0.95rem; line-height: 1.9; color: rgba(245,240,232,0.55); font-weight: 300; }
+.ugc-section__desc strong { color: var(--ocean-light); font-weight: 400; }
+.ugc-what {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px;
+  background: rgba(255,255,255,0.06); margin-bottom: 5rem;
+}
+.ugc-what__item { background: var(--charcoal); padding: 2.5rem; transition: background var(--transition); }
+.ugc-what__item:hover { background: var(--charcoal-mid); }
+.ugc-what__num {
+  font-family: var(--font-serif); font-size: 3rem; font-weight: 300;
+  color: rgba(90,155,171,0.3); display: block; margin-bottom: 1rem; line-height: 1;
+}
+.ugc-what__item h4 { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 400; color: var(--cream); margin-bottom: 0.75rem; }
+.ugc-what__item p { font-size: 0.85rem; line-height: 1.8; color: rgba(245,240,232,0.45); font-weight: 300; }
+.ugc-section__videos-header { margin-bottom: 2rem; }
+.ugc-section__videos-header h3 { font-family: var(--font-serif); font-size: 1.8rem; font-weight: 400; color: var(--cream); margin-top: 0.5rem; }
+.ugc-videos-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 3rem; }
+.ugc-video-item { display: flex; flex-direction: column; gap: 0.75rem; }
+.ugc-video-item .video-placeholder { aspect-ratio: 9/16; border-radius: 2px; width: 100%; }
+.ugc-video-item__label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,240,232,0.4); }
+.ugc-brands { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 3rem; }
+.ugc-brands p { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,240,232,0.25); margin-bottom: 1.5rem; }
+.ugc-brands__list { display: flex; flex-wrap: wrap; gap: 1rem; }
+.ugc-brands__list span {
+  font-size: 0.8rem; padding: 0.5rem 1.25rem; border: 1px solid rgba(255,255,255,0.1);
+  color: rgba(245,240,232,0.4); letter-spacing: 0.08em; transition: var(--transition);
+}
+.ugc-brands__list span:hover { border-color: var(--ocean-light); color: var(--ocean-light); }
+
+/* Contact service highlight */
+.contact-service-badge {
+  display: inline-block; background: var(--ocean); color: white;
+  font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+  padding: 0.4rem 1rem; margin-bottom: 1rem; opacity: 0; transition: opacity 0.3s ease;
+}
+.contact-service-badge.visible { opacity: 1; }
+
+@media (max-width: 1024px) {
+  .ugc-section { padding: 5rem 2rem; }
+  .ugc-section__header { grid-template-columns: 1fr; gap: 2rem; }
+  .ugc-what { grid-template-columns: 1fr; }
+  .ugc-videos-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .ugc-videos-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ===== WORK CARD CREDIBILITY LINE ===== */
+.work-card__cred {
+  font-size: 0.72rem; font-style: italic; font-family: var(--font-serif);
+  color: var(--ocean); line-height: 1.6; margin-bottom: 1.25rem;
+  padding: 0.75rem 1rem; background: var(--ocean-pale);
+  border-left: 2px solid var(--ocean);
+}
+
+/* ===== FOOTER CREDENTIALS ===== */
+.footer__bottom p:first-child {
+  font-size: 0.68rem; color: rgba(245,240,232,0.2); letter-spacing: 0.06em;
+}
+
+</style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">Joe Kerven</div>
+    <ul class="nav__links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#content">Content</a></li>
+      <li><a href="writing.html">Writing</a></li>
+      <li><a href="#journal">Journal</a></li>
+      <li><a href="#work">Work With Me</a></li>
+      <li><a href="#contact" class="nav__cta">Get In Touch</a></li>
+    </ul>
+    <button class="nav__burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu__close" id="menuClose">✕</button>
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#content" class="mobile-link">Content</a></li>
+      <li><a href="#writing" class="mobile-link">Writing</a></li>
+      <li><a href="#journal" class="mobile-link">Journal</a></li>
+      <li><a href="#work" class="mobile-link">Work With Me</a></li>
+      <li><a href="#contact" class="mobile-link">Get In Touch</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero__bg">
+      <div class="hero__video-carousel" id="videoCarousel">
+        <!-- Blurred background -->
+        <div class="hero__video-bg" id="videoBg">
+          <!-- YouTube iframes added here when Joe sends links -->
+          <!-- PLACEHOLDER: using CSS gradient until videos added -->
+        </div>
+        <!-- Fallback gradient -->
+        <div class="hero__video-fallback"></div>
+        <!-- Sharp vertical video centred -->
+        <div class="hero__video-main" id="videoMain">
+          <!-- Video 1 — ADD YOUTUBE LINK HERE -->
+          <!-- <iframe class="active" src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&mute=1&loop=1&playlist=VIDEO_ID&controls=0&playsinline=1" frameborder="0" allow="autoplay; fullscreen"></iframe> -->
+          <!-- Video 2 — ADD YOUTUBE LINK HERE -->
+          <!-- <iframe src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&mute=1&loop=1&playlist=VIDEO_ID&controls=0&playsinline=1" frameborder="0" allow="autoplay; fullscreen"></iframe> -->
+          <!-- Video 3 — ADD YOUTUBE LINK HERE -->
+          <!-- <iframe src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&mute=1&loop=1&playlist=VIDEO_ID&controls=0&playsinline=1" frameborder="0" allow="autoplay; fullscreen"></iframe> -->
+        </div>
+      </div>
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <h1 class="hero__headline"><em>Be Incandescent.</em></h1>
+      <p class="hero__identity">Poet · Marine Scientist · PADI Diver · Ocean Storyteller</p>
+      <p class="hero__location">Currently in Peru</p>
+      <div class="hero__ctas">
+        <a href="#about" class="btn btn--light">My Story</a>
+        <a href="#work" class="btn btn--outline-light">Work With Me</a>
+      </div>
+    </div>
+    <div class="hero__scroll-hint">
+      <div class="hero__scroll-line"></div>
+    </div>
+    <div class="hero__location-bar">
+      <div class="hero__journey">
+        <span class="journey__label">The journey</span>
+        <div class="journey__stops">
+          <span class="journey__stop journey__stop--active">Peru</span>
+          <span class="journey__arrow">→</span>
+          <span class="journey__stop">Travelling</span>
+          <span class="journey__arrow">→</span>
+          <span class="journey__stop">Australia</span>
+          <span class="journey__arrow">→</span>
+          <span class="journey__stop">Japan</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about__img-col">
+      <div class="about__img-main"><img src="https://res.cloudinary.com/daw9qytcn/image/upload/v1780498203/photo_joe_philippines.jpg.jpg" alt="Joe Kerven" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+      <div class="about__img-small"><img src="https://res.cloudinary.com/daw9qytcn/image/upload/v1780498203/photo_lake_walking.jpg.jpg" alt="Joe Kerven New Zealand" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+      <div class="about__pull-quote">
+        <p>"Shower with gusto.<br/>Spread your butter<br/>with elegance."</p>
+        <span>— Joe Kerven</span>
+      </div>
+    </div>
+    <div class="about__text-col">
+      <p class="section-eyebrow">Who Is Joe Kerven</p>
+      <h2 class="section-title">Marine scientist.<br/><em>Surf instructor.</em><br/>Poet. Adventurer.</h2>
+      <p class="about__body">I graduated with a First Class degree in Conservation Biology & Ecology from the University of Exeter. I've helped establish Indonesia's first shark nursery, restored coral reefs in the Gili Islands, surveyed seagrass meadows in Croatia, and filmed some of the UK's rarest marine wildlife — one video hit 213K views.</p>
+      <p class="about__body">I've been a Head Surf Instructor in Cornwall for five years, a ski instructor in the Canadian Rockies, and I spent last summer living in a van on the coast. Right now I'm headed to Peru as a rainforest guide. The wild leads. I follow.</p>
+      <p class="about__body">I also write — copy, captions, and poetry that people tell me makes them feel something. Scientist. Storyteller. Somewhere in the ocean. This is the home base.</p>
+      <div class="about__tags">
+        <span>BSc First Class Honours</span>
+        <span>PADI Rescue Diver</span>
+        <span>ISA Surf Instructor</span>
+        <span>CSIA Ski Instructor</span>
+        <span>Marine Ecologist</span>
+        <span>Shark Conservationist</span>
+        <span>Poet & Writer</span>
+      </div>
+      <a href="#contact" class="btn btn--dark">Say Hello →</a>
+    </div>
+  </section>
+
+  <!-- JOURNEY / STATS STRIP -->
+  <div class="stats-strip">
+    <div class="stats-strip__inner">
+      <div class="strip-stat">
+        <span class="strip-stat__num">213K</span>
+        <span class="strip-stat__label">Top video views</span>
+      </div>
+      <div class="strip-stat">
+        <span class="strip-stat__num">42.6K</span>
+        <span class="strip-stat__label">TikTok likes</span>
+      </div>
+      <div class="strip-stat">
+        <span class="strip-stat__num">1st</span>
+        <span class="strip-stat__label">Class Honours</span>
+      </div>
+      <div class="strip-stat">
+        <span class="strip-stat__num">5yr</span>
+        <span class="strip-stat__label">Surf instructor</span>
+      </div>
+      <div class="strip-stat">
+        <span class="strip-stat__num">6+</span>
+        <span class="strip-stat__label">Countries lived & worked</span>
+      </div>
+      <div class="strip-stat">
+        <span class="strip-stat__num">∞</span>
+        <span class="strip-stat__label">Good reasons to go</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTENT / UGC -->
+  <section class="content-section" id="content">
+    <div class="content-section__header">
+      <p class="section-eyebrow">Content & UGC</p>
+      <h2 class="section-title">Scroll-stopping content<br/><em>from the places most<br/>people only dream about</em></h2>
+      <p class="content-section__sub">Ocean. Rainforest. Mountains. Real environments, real experiences — content that performs because it's genuinely lived.</p>
+    </div>
+    <div class="ugc-grid">
+
+      <!-- Jellyfish 213K — featured large -->
+      <div class="ugc-item ugc-item--large">
+        <div class="ugc-item__embed">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@joe_kerven/video/7528746243258846486" data-video-id="7528746243258846486" style="max-width:325px;min-width:325px;">
+            <section></section>
+          </blockquote>
+        </div>
+        <div class="ugc-item__info">
+          <span class="ugc-tag">Marine Wildlife · 213K views</span>
+          <p>Filming some of the UK's only dangerous jellyfish.</p>
+        </div>
+      </div>
+
+      <!-- Surf lesson -->
+      <div class="ugc-item">
+        <div class="ugc-item__embed">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@joe_kerven/video/7589291982812564739" data-video-id="7589291982812564739" style="max-width:325px;min-width:325px;">
+            <section></section>
+          </blockquote>
+        </div>
+        <div class="ugc-item__info">
+          <span class="ugc-tag">Surf Instruction</span>
+          <p>Surf instructor lesson on the Atlantic coast.</p>
+        </div>
+      </div>
+
+      <!-- Kahu Kayaks brand deal -->
+      <div class="ugc-item">
+        <div class="ugc-item__embed">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@joe_kerven/video/7629878277217209622" data-video-id="7629878277217209622" style="max-width:325px;min-width:325px;">
+            <section></section>
+          </blockquote>
+        </div>
+        <div class="ugc-item__info">
+          <span class="ugc-tag">Ocean · New Zealand</span>
+          <p>Kayaking the Abel Tasman, New Zealand.</p>
+        </div>
+      </div>
+
+      <!-- Red Equipment brand deal -->
+      <div class="ugc-item">
+        <div class="ugc-item__embed">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@joe_kerven/video/7588540532071075094" data-video-id="7588540532071075094" style="max-width:325px;min-width:325px;">
+            <section></section>
+          </blockquote>
+        </div>
+        <div class="ugc-item__info">
+          <span class="ugc-tag">Brand Deal · Red Equipment</span>
+          <p>UGC for Red Equipment outdoor gear.</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="content-section__cta">
+      <a href="https://www.tiktok.com/@joe_kerven" target="_blank" class="btn btn--dark">Watch More on TikTok →</a>
+      <a href="#work" class="btn btn--sage">Commission Content →</a>
+    </div>
+  </section>
+
+  <!-- UGC DEDICATED SECTION -->
+  <section class="ugc-section" id="ugc">
+    <div class="ugc-section__inner">
+      <div class="ugc-section__header">
+        <div class="ugc-section__title-col">
+          <p class="section-eyebrow">UGC & Content Creation</p>
+          <h2 class="section-title">Content that performs<br/><em>because it's genuinely<br/>lived</em></h2>
+        </div>
+        <div class="ugc-section__desc">
+          <p>Most UGC creators rent a studio or film in their bedroom. I film underwater with sharks, in the Amazon rainforest, on Atlantic surf breaks, and on mountain slopes in Japan.</p>
+          <br/>
+          <p>I'm a <strong>PADI Rescue Diver</strong>, a <strong>qualified surf instructor</strong>, and a <strong>First Class Conservation Biologist</strong>. When I feature your outdoor or lifestyle brand, it's not acting. It's a Tuesday.</p>
+          <br/>
+          <p>Brands pay me to create short-form video content they can run as paid ads or post organically. I handle everything — concept, filming, editing, delivery.</p>
+        </div>
+      </div>
+
+      <div class="ugc-what">
+        <div class="ugc-what__item">
+          <span class="ugc-what__num">01</span>
+          <h4>Underwater & Ocean Content</h4>
+          <p>Snorkelling, diving, surf lifestyle. Authentic ocean environments most creators can't access. Perfect for water sports, dive gear, surf brands, and ocean conservation organisations.</p>
+        </div>
+        <div class="ugc-what__item">
+          <span class="ugc-what__num">02</span>
+          <h4>Adventure Travel & Nature</h4>
+          <p>Rainforest, mountains, remote coastlines. I'm always somewhere interesting — and I'm always filming. Tourism boards, outdoor gear, travel and lifestyle brands.</p>
+        </div>
+        <div class="ugc-what__item">
+          <span class="ugc-what__num">03</span>
+          <h4>Hook-Driven Ad Creative</h4>
+          <p>Short-form content built to stop the scroll. I understand what performs because I live and breathe the experience. Formatted for TikTok, Instagram Reels, and paid social.</p>
+        </div>
+      </div>
+
+      <div class="ugc-section__videos-header">
+        <p class="section-eyebrow">Examples</p>
+        <h3>Recent content &amp; brand work</h3>
+      </div>
+
+      <div class="ugc-videos-grid">
+        <div class="ugc-video-item">
+          <div class="video-placeholder ugc-video-item__media">
+            <div class="play-btn">▶</div>
+            <span class="ugc-item__tag">Marine Wildlife</span>
+          </div>
+          <span class="ugc-video-item__label">Jellyfish — 213K views</span>
+        </div>
+        <div class="ugc-video-item">
+          <div class="video-placeholder ugc-video-item__media">
+            <div class="play-btn">▶</div>
+            <span class="ugc-item__tag">Surf</span>
+          </div>
+          <span class="ugc-video-item__label">Surf lesson — 134K views</span>
+        </div>
+        <div class="ugc-video-item">
+          <div class="video-placeholder ugc-video-item__media">
+            <div class="play-btn">▶</div>
+            <span class="ugc-item__tag">Ocean Life</span>
+          </div>
+          <span class="ugc-video-item__label">Ocean lifestyle content</span>
+        </div>
+        <div class="ugc-video-item">
+          <div class="video-placeholder ugc-video-item__media">
+            <div class="play-btn">▶</div>
+            <span class="ugc-item__tag">Coming — Peru 🇵🇪</span>
+          </div>
+          <span class="ugc-video-item__label">Rainforest — coming soon</span>
+        </div>
+      </div>
+
+      <div class="ugc-brands">
+        <p>Ideal brand fit</p>
+        <div class="ugc-brands__list">
+          <span>Surf & Water Sports</span>
+          <span>Dive & Snorkel Gear</span>
+          <span>Outdoor & Adventure</span>
+          <span>Conservation Orgs</span>
+          <span>Tourism Boards</span>
+          <span>Travel Brands</span>
+          <span>Sustainable Lifestyle</span>
+          <span>GoPro & Camera Gear</span>
+          <span>Wetsuit & Surf Apparel</span>
+        </div>
+      </div>
+
+      <div style="margin-top:3rem;">
+        <a href="#contact" onclick="selectService('UGC / Content Creation')" class="btn btn--sage">Commission UGC →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WRITING -->
+  <section class="writing-section" id="writing">
+    <div class="writing-section__inner">
+      <div class="writing-section__left">
+        <p class="section-eyebrow">Writing</p>
+        <h2 class="section-title">Words that make<br/><em>people feel.</em></h2>
+        <p class="writing-intro">I write two kinds of things. Copy that sells — landing pages, emails, social captions, brand content for outdoor and conservation companies. And poetry that stops people mid-scroll and makes them feel alive.</p>
+        <p class="writing-intro">My science background means I research properly. My life in the ocean means I write authentically. My surf instructor years mean I know how to communicate with real humans.</p>
+        <a href="#work" class="btn btn--dark">Hire Me To Write →</a>
+      </div>
+      <div class="writing-section__right">
+        <div class="writing-tabs">
+          <div class="writing-tabs__nav">
+            <button class="tab-btn tab-btn--active" data-tab="poetry">Poetry</button>
+            <button class="tab-btn" data-tab="copy">Copywriting</button>
+          </div>
+          <div class="tab-content tab-content--active" id="tab-poetry">
+            <div class="poem-card">
+              <p class="poem-text">The future isn't fixed in stone.<br/>It simply hasn't been written yet.<br/><br/>What changes your future<br/>is what you do now.<br/><br/>Make yourself magnificent<br/>in every tiny thing you do.<br/><br/>Shower with gusto.<br/>Spread your butter with elegance.<br/><br/>Dance in that kitchen<br/>with such ferocity<br/>the house threatens<br/>to dance right alongside you.<br/><br/>Keep your eyes on the stars, fool.<br/>You're shining too bright<br/>to be dimmed by clouds.<br/><br/><em>Be incandescent.</em></p>
+              <span class="poem-credit">— Joe Kerven</span>
+            </div>
+            <a href="writing.html" class="writing-link">Read all poetry →</a>
+          </div>
+          <div class="tab-content" id="tab-copy">
+            <div class="copy-samples">
+              <div class="copy-card">
+                <span class="copy-tag">Brand Copy</span>
+                <h4>Outdoor & Conservation Brands</h4>
+                <p>Landing pages, website copy, and brand voice for brands in the surf, dive, travel, and conservation space. Written by someone who actually lives this life.</p>
+                <a href="#contact" class="writing-link">Request samples →</a>
+              </div>
+              <div class="copy-card">
+                <span class="copy-tag">Social & Email</span>
+                <h4>Captions, Campaigns & Email Sequences</h4>
+                <p>Social captions that feel human. Email sequences that retain. Campaign copy that converts. All grounded in real outdoor lifestyle experience.</p>
+                <a href="#contact" class="writing-link">Request samples →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNAL -->
+  <section class="journal" id="journal">
+    <div class="journal__header">
+      <p class="section-eyebrow">The Journal</p>
+      <h2 class="section-title">Dispatches from<br/><em>the wild</em></h2>
+      <p class="journal__sub">Writing from the road. Ocean reflections, poetry, personal development, and the occasional dispatch from somewhere without great WiFi.</p>
+    </div>
+    <div class="journal__grid">
+      <article class="journal-card journal-card--featured">
+        <div class="journal-card__img"><img src="https://res.cloudinary.com/daw9qytcn/image/upload/v1780498203/photo_pier.jpg.jpg" alt="Poetry" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+        <div class="journal-card__content">
+          <span class="journal-tag">Poetry</span>
+          <h3>"Be Incandescent"</h3>
+          <p>On making yourself magnificent in every tiny thing — from the way you shower to the way you dance in your kitchen at 7am.</p>
+          <a href="#writing" class="journal-link">Read →</a>
+        </div>
+      </article>
+      <article class="journal-card">
+        <div class="journal-card__img"><img src="https://res.cloudinary.com/daw9qytcn/image/upload/v1780498205/photo_seaSnake.jpg.jpg" alt="Ocean" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+        <div class="journal-card__content">
+          <span class="journal-tag">Ocean</span>
+          <h3>What the jellyfish taught me about going viral</h3>
+          <p>213,000 people watched me swim with dangerous jellyfish. Here's what I learned about authentic content — and about the ocean.</p>
+          <a href="#" class="journal-link">Coming soon →</a>
+        </div>
+      </article>
+      <article class="journal-card">
+        <div class="journal-card__img"><img src="https://res.cloudinary.com/daw9qytcn/image/upload/v1780498204/photo_mountain.jpg.jpg" alt="Adventure" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+        <div class="journal-card__content">
+          <span class="journal-tag">Adventure</span>
+          <h3>Why I left ecology to go to Peru</h3>
+          <p>I had a good job, a First Class degree, and a career mapped out. Then I booked a one-way ticket to the Amazon.</p>
+          <a href="#" class="journal-link">Coming soon →</a>
+        </div>
+      </article>
+    </div>
+    <div class="journal__newsletter">
+      <div class="journal__newsletter-inner">
+        <div>
+          <h3>Follow the journey</h3>
+          <p>One email. Whenever I write something worth reading. No noise.</p>
+        </div>
+        <div class="newsletter-form">
+          <input type="email" placeholder="your@email.com" />
+          <button class="btn btn--light">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK WITH ME -->
+  <section class="work" id="work">
+    <div class="work__header">
+      <p class="section-eyebrow">Work With Me</p>
+      <h2 class="section-title">Three ways to<br/><em>work together</em></h2>
+    </div>
+    <div class="work__cards">
+      <div class="work-card">
+        <div class="work-card__img"><img src="https://res.cloudinary.com/daw9qytcn/image/upload/v1780498205/photo_seaSnake.jpg.jpg" alt="UGC content" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+        <div class="work-card__content">
+          <span class="work-card__num">01</span>
+          <h3>UGC & Content Creation</h3>
+          <p>Short-form video content shot in the ocean, rainforests, on surf breaks and mountain slopes. I love to work naturally in the outdoors — ocean, rainforest, mountains, surf breaks. Ideal for outdoor, travel, surf, dive, conservation and lifestyle brands.</p>
+          <ul>
+            <li>Underwater & ocean filming</li>
+            <li>Adventure travel integrations</li>
+            <li>Hook-driven TikTok & Reels</li>
+            <li>Product placement that fits</li>
+            <li>Available globally whilst travelling</li>
+          </ul>
+          <p class="work-card__cred">Filmed by a PADI certified scientific diver & First Class marine biologist</p>
+          <a href="#contact" onclick="selectService('UGC / Content Creation')" class="btn btn--sage">Enquire →</a>
+        </div>
+      </div>
+      <div class="work-card">
+        <div class="work-card__img"><img src="https://res.cloudinary.com/daw9qytcn/image/upload/v1780498205/photo_roys_peak.jpg.jpg" alt="Writing" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+        <div class="work-card__content">
+          <span class="work-card__num">02</span>
+          <h3>Copywriting & Brand Writing</h3>
+          <p>Words written by someone who actually lives in the world your customers aspire to. Science-backed, ocean-tested, human-sounding copy for brands that want to say something real.</p>
+          <ul>
+            <li>Website & landing page copy</li>
+            <li>Email sequences</li>
+            <li>Social media captions</li>
+            <li>Blog & long-form content</li>
+            <li>Brand voice development</li>
+          </ul>
+          <p class="work-card__cred">Written by a First Class BSc graduate, surf instructor & ocean professional</p>
+          <a href="#contact" onclick="selectService('Copywriting')" class="btn btn--sage">Enquire →</a>
+        </div>
+      </div>
+      <div class="work-card">
+        <div class="work-card__img"><img src="https://res.cloudinary.com/daw9qytcn/image/upload/v1780498203/photo_alps.jpg.jpg" alt="Brand partnerships" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+        <div class="work-card__content">
+          <span class="work-card__num">03</span>
+          <h3>Brand Partnerships</h3>
+          <p>Long-term collaborations with brands whose values align with mine — ocean conservation, outdoor adventure, sustainable travel, surf culture. If your brand lives in this world, let's talk.</p>
+          <ul>
+            <li>Ambassador partnerships</li>
+            <li>Campaign creation</li>
+            <li>Conservation & ocean brands</li>
+            <li>Tourism boards & travel brands</li>
+            <li>Surf, dive & outdoor gear</li>
+          </ul>
+          <p class="work-card__cred">CSIA Level 1 Ski Instructor · 6+ countries lived & worked · conservation researcher</p>
+          <a href="#contact" onclick="selectService('Brand Partnership')" class="btn btn--sage">Enquire →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact__left">
+      <p class="section-eyebrow">Get In Touch</p>
+      <div class="contact-service-badge" id="serviceBadge"></div>
+      <h2 class="section-title">Let's make<br/><em>something worth<br/>talking about</em></h2>
+      <p class="contact__body">Whether you're a brand looking for content, a person who wants to talk about the ocean, or you just want to say hello — my inbox is open.</p>
+      <div class="contact__details">
+        <a href="mailto:heyjoekerven@gmail.com" class="contact__email">heyjoekerven@gmail.com</a>
+        <div class="contact__socials">
+          <a href="https://www.tiktok.com/@joe_kerven" target="_blank">TikTok</a>
+          <a href="https://www.instagram.com/joekerven" target="_blank">Instagram</a>
+        </div>
+      </div>
+      <div class="contact__img"><img src="https://res.cloudinary.com/daw9qytcn/image/upload/v1780498202/photo_ferry_smile.jpg.jpg" alt="Joe Kerven" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+    </div>
+    <div class="contact__right">
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" placeholder="Jane Smith" required />
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="jane@brand.com" required />
+        </div>
+        <div class="form-group">
+          <label>What are you reaching out about?</label>
+          <select>
+            <option value="">Select one</option>
+            <option>UGC / Content Creation</option>
+            <option>Copywriting</option>
+            <option>Brand Partnership</option>
+            <option>Just saying hello</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Tell me more</label>
+          <textarea rows="6" placeholder="What are you working on? What do you need? What's the vibe?"></textarea>
+        </div>
+        <button type="submit" class="btn btn--dark btn--full">Send It →</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__left">
+        <div class="footer__logo">Joe Kerven</div>
+        <p class="footer__tagline">"You'll never be younger than you are right now."</p>
+      </div>
+      <div class="footer__links">
+        <a href="#about">About</a>
+        <a href="#content">Content</a>
+        <a href="#writing">Writing</a>
+        <a href="#journal">Journal</a>
+        <a href="#work">Work With Me</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer__socials">
+        <a href="https://www.tiktok.com/@joe_kerven" target="_blank">TikTok</a>
+        <a href="https://www.instagram.com/joekerven" target="_blank">Instagram</a>
+        <a href="mailto:heyjoekerven@gmail.com">Email</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2025 Joe Kerven · BSc Conservation Biology & Ecology (1st) · PADI Rescue Diver · ISA Surf Instructor</p>
+      <p>Currently: Peru</p>
+    </div>
+  </footer>
+
+  <script>
+// ===== NAV SCROLL =====
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// ===== BURGER MENU =====
+const burger = document.getElementById('burger');
+const mobileMenu = document.getElementById('mobileMenu');
+const menuClose = document.getElementById('menuClose');
+const mobileLinks = document.querySelectorAll('.mobile-link');
+
+burger.addEventListener('click', () => {
+  mobileMenu.classList.add('open');
+  document.body.style.overflow = 'hidden';
+});
+menuClose.addEventListener('click', () => {
+  mobileMenu.classList.remove('open');
+  document.body.style.overflow = '';
+});
+mobileLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
+
+// ===== HERO VIDEO CAROUSEL =====
+const videoMain = document.getElementById('videoMain');
+const videoBg = document.getElementById('videoBg');
+
+if (videoMain) {
+  const mainFrames = videoMain.querySelectorAll('iframe');
+  const bgFrames = videoBg ? videoBg.querySelectorAll('iframe') : [];
+  let current = 0;
+
+  if (mainFrames.length > 1) {
+    function nextVideo() {
+      mainFrames[current].classList.remove('active');
+      if (bgFrames[current]) bgFrames[current].classList.remove('active');
+      current = (current + 1) % mainFrames.length;
+      mainFrames[current].classList.add('active');
+      if (bgFrames[current]) bgFrames[current].classList.add('active');
+    }
+    setInterval(nextVideo, 7000);
+  }
+}
+
+// ===== WRITING TABS =====
+const tabBtns = document.querySelectorAll('.tab-btn');
+const tabContents = document.querySelectorAll('.tab-content');
+tabBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    tabBtns.forEach(b => b.classList.remove('tab-btn--active'));
+    tabContents.forEach(c => c.classList.remove('tab-content--active'));
+    btn.classList.add('tab-btn--active');
+    document.getElementById('tab-' + btn.dataset.tab).classList.add('tab-content--active');
+  });
+});
+
+// ===== SELECT SERVICE (enquire buttons) =====
+function selectService(service) {
+  // Pre-select the dropdown
+  const select = document.querySelector('.contact-form select');
+  if (select) {
+    for (let i = 0; i < select.options.length; i++) {
+      if (select.options[i].text === service) {
+        select.selectedIndex = i;
+        break;
+      }
+    }
+  }
+  // Show the badge
+  const badge = document.getElementById('serviceBadge');
+  if (badge) {
+    badge.textContent = 'Enquiring about: ' + service;
+    badge.classList.add('visible');
+  }
+}
+
+// ===== SCROLL REVEAL =====
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.section-title, .about__body, .work-card, .journal-card, .strip-stat, .about__tags, .ugc-video-item, .ugc-what__item, .copy-card').forEach(el => {
+  el.classList.add('reveal');
+  observer.observe(el);
+});
+
+// ===== CONTACT FORM =====
+const form = document.getElementById('contactForm');
+if (form) {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    btn.textContent = 'Message Sent ✓';
+    btn.style.background = 'var(--ocean)';
+    setTimeout(() => {
+      btn.textContent = 'Send It →';
+      btn.style.background = '';
+      form.reset();
+      const badge = document.getElementById('serviceBadge');
+      if (badge) badge.classList.remove('visible');
+    }, 3000);
+  });
+}
+
+// ===== NEWSLETTER =====
+const newsletterBtn = document.querySelector('.newsletter-form .btn');
+if (newsletterBtn) {
+  newsletterBtn.addEventListener('click', () => {
+    const input = document.querySelector('.newsletter-form input');
+    if (input && input.value.includes('@')) {
+      newsletterBtn.textContent = "You're in ✓";
+      newsletterBtn.style.background = 'var(--ocean)';
+      input.value = '';
+      setTimeout(() => {
+        newsletterBtn.textContent = 'Subscribe';
+        newsletterBtn.style.background = '';
+      }, 3000);
+    }
+  });
+}
+
+</script>
+  <script async src="https://www.tiktok.com/embed.js"></script>
+</body>
+</html>

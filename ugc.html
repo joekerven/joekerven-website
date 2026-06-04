@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="UGC content creation by Joe Kerven — marine scientist, PADI Rescue Diver and surf instructor. Ocean, adventure travel, rainforest and lifestyle content that performs." />
+  <meta name="keywords" content="Joe Kerven UGC, ocean content creator, adventure UGC, surf content creation, marine wildlife video, lifestyle UGC creator" />
+  <meta name="author" content="Joe Kerven" />
+  <title>UGC & Content Creation — Joe Kerven</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #F5F0E8;
+      --cream-dark: #EDE6D6;
+      --charcoal: #1A1A18;
+      --charcoal-mid: #2E2E2C;
+      --ocean: #2A6B7C;
+      --ocean-light: #5A9BAB;
+      --ocean-pale: #C2D8DE;
+      --sand: #B8A88A;
+      --sand-light: #E8DFD0;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'DM Sans', sans-serif;
+      --transition: 0.3s ease;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-sans); background: var(--charcoal); color: var(--cream); overflow-x: hidden; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    button { font-family: var(--font-sans); cursor: pointer; border: none; background: none; }
+
+    /* ===== NAV ===== */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.5rem 4rem;
+      background: rgba(26,26,24,0.95); backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .nav__logo { font-family: var(--font-serif); font-size: 1.2rem; color: var(--cream); letter-spacing: 0.08em; }
+    .nav__links { display: flex; align-items: center; gap: 2rem; }
+    .nav__links a { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,240,232,0.5); transition: color var(--transition); }
+    .nav__links a:hover { color: var(--ocean-light); }
+    .nav__links a.active { color: var(--ocean-light); border-bottom: 1px solid var(--ocean-light); padding-bottom: 2px; }
+    .nav__cta { background: var(--ocean) !important; color: white !important; padding: 0.55rem 1.3rem; color: var(--cream) !important; }
+    .nav__cta:hover { background: var(--ocean-light) !important; }
+    .nav__back { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,240,232,0.4); transition: color var(--transition); }
+    .nav__back:hover { color: var(--ocean-light); }
+
+    /* ===== HERO ===== */
+    .page-hero {
+      padding: 10rem 4rem 5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: end; max-width: 1280px;
+    }
+    .page-hero__eyebrow { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ocean-light); margin-bottom: 1.25rem; font-weight: 500; }
+    .page-hero__title { font-family: var(--font-serif); font-size: clamp(2.8rem, 5vw, 4.5rem); font-weight: 300; line-height: 1.1; color: var(--cream); }
+    .page-hero__title em { font-style: italic; color: var(--ocean-light); }
+    .page-hero__desc { font-size: 0.95rem; line-height: 1.9; color: rgba(245,240,232,0.55); font-weight: 300; margin-bottom: 2rem; }
+    .btn { display: inline-block; padding: 0.82rem 1.75rem; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; transition: var(--transition); cursor: pointer; }
+    .btn--ocean { background: var(--ocean); color: white; }
+    .btn--ocean:hover { background: var(--ocean-light); }
+    .btn--outline { background: transparent; color: var(--cream); border: 1px solid rgba(255,255,255,0.2); }
+    .btn--outline:hover { border-color: var(--ocean-light); color: var(--ocean-light); }
+    .btn--cream { background: var(--cream); color: var(--charcoal); }
+    .btn--cream:hover { background: var(--sand-light); }
+    .page-hero__btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    /* ===== VIDEOS SECTION ===== */
+    .videos-section { padding: 6rem 4rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .videos-section__inner { max-width: 1280px; margin: 0 auto; }
+    .videos-section__header { margin-bottom: 3rem; }
+    .videos-section__eyebrow { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ocean-light); margin-bottom: 0.75rem; font-weight: 500; }
+    .videos-section__title { font-family: var(--font-serif); font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 300; color: var(--cream); }
+    .videos-section__title em { font-style: italic; color: var(--ocean-light); }
+
+    /* TikTok embed grid */
+    .tiktok-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem; margin-bottom: 2rem; align-items: start;
+    }
+    .tiktok-item { display: flex; flex-direction: column; gap: 0.75rem; }
+    .tiktok-item__embed { width: 100%; }
+    .tiktok-item__embed blockquote { margin: 0 auto !important; }
+    .tiktok-item__label { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,240,232,0.35); }
+    .tiktok-item__views { font-family: var(--font-serif); font-size: 1.1rem; color: var(--ocean-light); }
+
+    /* Placeholder video tiles */
+    .video-tile {
+      aspect-ratio: 9/16; background: #0D2B35;
+      background-image: radial-gradient(ellipse at 35% 45%, rgba(42,107,124,0.4) 0%, transparent 55%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 1rem; position: relative; overflow: hidden;
+    }
+    .video-tile__play {
+      width: 52px; height: 52px; border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.25);
+      background: rgba(255,255,255,0.08); display: flex;
+      align-items: center; justify-content: center;
+      color: white; font-size: 0.9rem; backdrop-filter: blur(4px);
+    }
+    .video-tile__tag {
+      position: absolute; top: 1rem; left: 1rem;
+      background: rgba(10,20,25,0.7); color: var(--ocean-light);
+      font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 0.3rem 0.75rem; border-radius: 20px;
+    }
+    .videos-section__cta { margin-top: 2.5rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+    .videos-section__cta-note { font-family: var(--font-serif); font-style: italic; font-size: 0.88rem; color: rgba(245,240,232,0.35); }
+
+    /* ===== PROOF SECTION — Stats + Credentials ===== */
+    .proof-section { background: var(--charcoal-mid); padding: 6rem 4rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .proof-section__inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; }
+
+    /* Stats */
+    .proof-stats__eyebrow { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ocean-light); margin-bottom: 2rem; font-weight: 500; }
+    .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5px; background: rgba(255,255,255,0.06); }
+    .stat-tile { background: var(--charcoal-mid); padding: 2rem; }
+    .stat-tile__num { font-family: var(--font-serif); font-size: 3rem; font-weight: 300; color: var(--ocean-light); line-height: 1; display: block; margin-bottom: 0.4rem; }
+    .stat-tile__label { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(245,240,232,0.4); display: block; }
+    .stat-tile__sub { font-family: var(--font-serif); font-style: italic; font-size: 0.78rem; color: rgba(245,240,232,0.25); display: block; margin-top: 0.2rem; }
+
+    /* Credentials */
+    .proof-creds__eyebrow { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ocean-light); margin-bottom: 2rem; font-weight: 500; }
+    .creds-list { display: flex; flex-direction: column; gap: 0; }
+    .cred-item { padding: 1.25rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; flex-direction: column; gap: 0.2rem; }
+    .cred-item:first-child { border-top: 1px solid rgba(255,255,255,0.06); }
+    .cred-item__title { font-size: 0.88rem; color: rgba(245,240,232,0.85); font-weight: 400; }
+    .cred-item__sub { font-family: var(--font-serif); font-style: italic; font-size: 0.8rem; color: var(--ocean-light); }
+
+    /* ===== WHAT I OFFER ===== */
+    .offer-section { padding: 6rem 4rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .offer-section__inner { max-width: 1280px; margin: 0 auto; }
+    .offer-section__header { max-width: 600px; margin-bottom: 4rem; }
+    .offer-section__eyebrow { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ocean-light); margin-bottom: 1rem; font-weight: 500; }
+    .offer-section__title { font-family: var(--font-serif); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; line-height: 1.15; color: var(--cream); }
+    .offer-section__title em { font-style: italic; color: var(--ocean-light); }
+    .offer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: rgba(255,255,255,0.06); margin-bottom: 4rem; }
+    .offer-card { background: var(--charcoal); padding: 2.5rem; transition: background var(--transition); }
+    .offer-card:hover { background: var(--charcoal-mid); }
+    .offer-card__num { font-family: var(--font-serif); font-size: 3rem; font-weight: 300; color: rgba(90,155,171,0.2); display: block; margin-bottom: 1rem; line-height: 1; }
+    .offer-card h4 { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 400; color: var(--cream); margin-bottom: 0.75rem; line-height: 1.3; }
+    .offer-card p { font-size: 0.83rem; line-height: 1.8; color: rgba(245,240,232,0.45); font-weight: 300; margin-bottom: 1.5rem; }
+    .offer-card ul { display: flex; flex-direction: column; gap: 0; }
+    .offer-card li { font-size: 0.8rem; color: rgba(245,240,232,0.4); padding: 0.4rem 0 0.4rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); position: relative; }
+    .offer-card li::before { content: '—'; position: absolute; left: 0; color: var(--ocean-light); }
+
+    /* ===== BRAND FIT ===== */
+    .brand-fit { padding: 0 4rem 6rem; }
+    .brand-fit__inner { max-width: 1280px; margin: 0 auto; }
+    .brand-fit__eyebrow { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ocean-light); margin-bottom: 1.5rem; font-weight: 500; }
+    .brand-fit__tags { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .brand-tag { font-size: 0.75rem; letter-spacing: 0.08em; padding: 0.5rem 1.25rem; border: 1px solid rgba(255,255,255,0.1); color: rgba(245,240,232,0.5); transition: all var(--transition); }
+    .brand-tag:hover { border-color: var(--ocean-light); color: var(--ocean-light); }
+
+    /* ===== ENQUIRE ===== */
+    .enquire-section { background: var(--ocean); padding: 5rem 4rem; }
+    .enquire-section__inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .enquire-section__title { font-family: var(--font-serif); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; color: white; line-height: 1.15; margin-bottom: 1rem; }
+    .enquire-section__title em { font-style: italic; }
+    .enquire-section__desc { font-size: 0.9rem; line-height: 1.85; color: rgba(255,255,255,0.7); font-weight: 300; }
+    .enquire-form { display: flex; flex-direction: column; gap: 1rem; }
+    .enquire-form input, .enquire-form select, .enquire-form textarea {
+      padding: 0.9rem 1.1rem; border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.1); color: white; font-size: 0.9rem;
+      outline: none; font-family: var(--font-sans); transition: border-color var(--transition);
+      border-radius: 2px;
+    }
+    .enquire-form input::placeholder, .enquire-form textarea::placeholder { color: rgba(255,255,255,0.4); }
+    .enquire-form select { color: rgba(255,255,255,0.8); }
+    .enquire-form select option { background: var(--charcoal); color: var(--cream); }
+    .enquire-form input:focus, .enquire-form select:focus, .enquire-form textarea:focus { border-color: rgba(255,255,255,0.6); }
+    .enquire-form textarea { resize: vertical; }
+    .btn--white { background: white; color: var(--ocean); display: block; width: 100%; text-align: center; padding: 0.9rem; }
+    .btn--white:hover { background: var(--cream); }
+
+    /* ===== FOOTER ===== */
+    .footer { background: var(--charcoal); padding: 3rem 4rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.06); }
+    .footer__logo { font-family: var(--font-serif); font-size: 1.2rem; color: var(--cream); font-weight: 300; }
+    .footer__back { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,240,232,0.4); transition: color var(--transition); }
+    .footer__back:hover { color: var(--ocean-light); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .nav { padding: 1.25rem 2rem; }
+      .nav__links { display: none; }
+      .page-hero { padding: 8rem 2rem 4rem; grid-template-columns: 1fr; gap: 2rem; }
+      .videos-section { padding: 4rem 2rem; }
+      .tiktok-grid { grid-template-columns: repeat(2, 1fr); }
+      .proof-section { padding: 4rem 2rem; }
+      .proof-section__inner { grid-template-columns: 1fr; gap: 3rem; }
+      .offer-section { padding: 4rem 2rem; }
+      .offer-grid { grid-template-columns: 1fr; }
+      .brand-fit { padding: 0 2rem 4rem; }
+      .enquire-section { padding: 4rem 2rem; }
+      .enquire-section__inner { grid-template-columns: 1fr; gap: 3rem; }
+      .footer { padding: 2rem; flex-direction: column; gap: 1rem; text-align: center; }
+    }
+    @media (max-width: 640px) {
+      .tiktok-grid { grid-template-columns: 1fr 1fr; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .page-hero__btns { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">Joe Kerven</a>
+    <div class="nav__links">
+      <a href="index.html">Home</a>
+      <a href="ugc.html" class="active">UGC</a>
+      <a href="writing.html">Writing</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <a href="index.html" class="nav__back">← Back to site</a>
+  </nav>
+
+  <!-- HERO -->
+  <div class="page-hero">
+    <div>
+      <p class="page-hero__eyebrow">UGC & Content Creation</p>
+      <h1 class="page-hero__title">Content shot in places<br/>most creators<br/><em>only dream about</em></h1>
+    </div>
+    <div>
+      <p class="page-hero__desc">I'm a PADI Rescue Diver, ISA surf instructor, and First Class Conservation Biologist. I film underwater with sharks, in the Amazon rainforest, on Atlantic surf breaks, and on mountain slopes. I love to work naturally in the outdoors — ocean, rainforest, mountains, surf breaks.</p>
+      <p class="page-hero__desc">Available globally whilst travelling. Fast turnaround, easy communication, content built to perform.</p>
+      <div class="page-hero__btns">
+        <a href="#enquire" class="btn btn--ocean">Enquire About UGC →</a>
+        <a href="#videos" class="btn btn--outline">See The Work ↓</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIDEOS -->
+  <section class="videos-section" id="videos">
+    <div class="videos-section__inner">
+      <div class="videos-section__header">
+        <p class="videos-section__eyebrow">The Work</p>
+        <h2 class="videos-section__title">Recent content &<br/><em>brand work</em></h2>
+      </div>
+      <div class="tiktok-grid">
+
+        <!-- Jellyfish 213K -->
+        <div class="tiktok-item">
+          <div class="tiktok-item__embed">
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@joe_kerven/video/7528746243258846486" data-video-id="7528746243258846486" style="max-width:325px;min-width:325px;">
+              <section></section>
+            </blockquote>
+          </div>
+          <span class="tiktok-item__views">Marine Wildlife · 213K views</span>
+          <span class="tiktok-item__label">Jellyfish — organic reach</span>
+        </div>
+
+        <div class="tiktok-item">
+          <div class="tiktok-item__embed">
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@joe_kerven/video/7589291982812564739" data-video-id="7589291982812564739" style="max-width:325px;min-width:325px;">
+              <section></section>
+            </blockquote>
+          </div>
+          <span class="tiktok-item__views">Surf Instruction</span>
+          <span class="tiktok-item__label">Surf instructor lesson</span>
+        </div>
+
+        <div class="tiktok-item">
+          <div class="tiktok-item__embed">
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@joe_kerven/video/7630393604296461590" data-video-id="7630393604296461590" style="max-width:325px;min-width:325px;">
+              <section></section>
+            </blockquote>
+          </div>
+          <span class="tiktok-item__views">Travel · New Zealand</span>
+          <span class="tiktok-item__label">Trending audio — NZ</span>
+        </div>
+
+        <div class="tiktok-item">
+          <div class="tiktok-item__embed">
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@joe_kerven/video/7629878277217209622" data-video-id="7629878277217209622" style="max-width:325px;min-width:325px;">
+              <section></section>
+            </blockquote>
+          </div>
+          <span class="tiktok-item__views">Ocean · New Zealand</span>
+          <span class="tiktok-item__label">Kayaking Abel Tasman, NZ</span>
+        </div>
+
+        <div class="tiktok-item">
+          <div class="tiktok-item__embed">
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@joe_kerven/video/7614576662839135510" data-video-id="7614576662839135510" style="max-width:325px;min-width:325px;">
+              <section></section>
+            </blockquote>
+          </div>
+          <span class="tiktok-item__views">Brand Deal · Surf Trip</span>
+          <span class="tiktok-item__label">UGC — surf clothing</span>
+        </div>
+
+        <div class="tiktok-item">
+          <div class="tiktok-item__embed">
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@joe_kerven/video/7594878152825146647" data-video-id="7594878152825146647" style="max-width:325px;min-width:325px;">
+              <section></section>
+            </blockquote>
+          </div>
+          <span class="tiktok-item__views">Adventure · Skiing</span>
+          <span class="tiktok-item__label">Ski content</span>
+        </div>
+
+        <div class="tiktok-item">
+          <div class="tiktok-item__embed">
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@joe_kerven/video/7588540532071075094" data-video-id="7588540532071075094" style="max-width:325px;min-width:325px;">
+              <section></section>
+            </blockquote>
+          </div>
+          <span class="tiktok-item__views">Brand Deal · Red Equipment</span>
+          <span class="tiktok-item__label">UGC — outdoor gear</span>
+        </div>
+
+
+        <div class="tiktok-item">
+          <div class="tiktok-item__embed">
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@joe_kerven/video/7573321277016935702" data-video-id="7573321277016935702" style="max-width:325px;min-width:325px;">
+              <section></section>
+            </blockquote>
+          </div>
+          <span class="tiktok-item__views">Ocean · Snorkelling</span>
+          <span class="tiktok-item__label">Underwater snorkelling — high engagement</span>
+        </div>
+
+      </div>
+      <div class="videos-section__cta">
+        <a href="https://www.tiktok.com/@joe_kerven" target="_blank" class="btn btn--ocean">Watch More on TikTok →</a>
+        <span class="videos-section__cta-note">1,264 followers · 42.6K likes · growing</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF — Stats + Credentials -->
+  <section class="proof-section">
+    <div class="proof-section__inner">
+
+      <!-- Stats -->
+      <div class="proof-stats">
+        <p class="proof-stats__eyebrow">By The Numbers</p>
+        <div class="stats-grid">
+          <div class="stat-tile">
+            <span class="stat-tile__num">213K</span>
+            <span class="stat-tile__label">Top video views</span>
+            <span class="stat-tile__sub">Compass jellyfish — organic</span>
+          </div>
+          <div class="stat-tile">
+            <span class="stat-tile__num">134K</span>
+            <span class="stat-tile__label">Second top video</span>
+            <span class="stat-tile__sub">Surf lesson — organic</span>
+          </div>
+          <div class="stat-tile">
+            <span class="stat-tile__num">42.6K</span>
+            <span class="stat-tile__label">Total likes</span>
+            <span class="stat-tile__sub">Across all content</span>
+          </div>
+          <div class="stat-tile">
+            <span class="stat-tile__num">High</span>
+            <span class="stat-tile__label">Engagement rate</span>
+            <span class="stat-tile__sub">Above platform average</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Credentials -->
+      <div class="proof-creds">
+        <p class="proof-creds__eyebrow">Why I'm Different</p>
+        <div class="creds-list">
+          <div class="cred-item">
+            <span class="cred-item__title">BSc Conservation Biology & Ecology</span>
+            <span class="cred-item__sub">First Class Honours — University of Exeter</span>
+          </div>
+          <div class="cred-item">
+            <span class="cred-item__title">PADI Rescue Diver</span>
+            <span class="cred-item__sub">Certified underwater ecological monitoring</span>
+          </div>
+          <div class="cred-item">
+            <span class="cred-item__title">Head Surf Instructor — Cornwall</span>
+            <span class="cred-item__sub">ISA Level 1 · 5 years teaching</span>
+          </div>
+          <div class="cred-item">
+            <span class="cred-item__title">Gili Shark Conservation, Indonesia</span>
+            <span class="cred-item__sub">Co-established Indonesia's first shark nursery</span>
+          </div>
+          <div class="cred-item">
+            <span class="cred-item__title">Rainforest Guide — Peru</span>
+            <span class="cred-item__sub">Amazon — currently on location</span>
+          </div>
+          <div class="cred-item">
+            <span class="cred-item__title">Ski Instructor — Lake Louise, Canada</span>
+            <span class="cred-item__sub">CSIA Level 1 certified</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHAT I OFFER -->
+  <section class="offer-section">
+    <div class="offer-section__inner">
+      <div class="offer-section__header">
+        <p class="offer-section__eyebrow">What I Offer</p>
+        <h2 class="offer-section__title">Three types of<br/><em>UGC content</em></h2>
+      </div>
+      <div class="offer-grid">
+        <div class="offer-card">
+          <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80" alt="Ocean content" style="width:100%;height:180px;object-fit:cover;display:block;margin-bottom:0;" />
+          <span class="offer-card__num">01</span>
+          <h4>Underwater & Ocean Content</h4>
+          <p>Snorkelling, diving, surf lifestyle. Environments most creators can't access. Shot by a PADI Rescue Diver who's been doing this professionally for years.</p>
+          <ul>
+            <li>Underwater product shots</li>
+            <li>Marine wildlife integrations</li>
+            <li>Surf & ocean lifestyle</li>
+            <li>Coastal adventure content</li>
+          </ul>
+        </div>
+        <div class="offer-card">
+          <img src="https://images.unsplash.com/photo-1682687982501-1e58ab814714?w=800&q=80" alt="Adventure travel" style="width:100%;height:180px;object-fit:cover;display:block;margin-bottom:0;" />
+          <span class="offer-card__num">02</span>
+          <h4>Adventure Travel & Nature</h4>
+          <p>Rainforest, mountains, remote coastlines. Peru, Philippines, New Zealand, Indonesia — your brand gets to exist in places most people only see in documentaries.</p>
+          <ul>
+            <li>Destination content</li>
+            <li>Outdoor gear integrations</li>
+            <li>Tourism board content</li>
+            <li>Adventure lifestyle</li>
+          </ul>
+        </div>
+        <div class="offer-card">
+          <img src="https://images.unsplash.com/photo-1531722569936-825d4eee4497?w=800&q=80" alt="Ad creative" style="width:100%;height:180px;object-fit:cover;display:block;margin-bottom:0;" />
+          <span class="offer-card__num">03</span>
+          <h4>Hook-Driven Ad Creative</h4>
+          <p>Short-form content built to stop the scroll. Formatted for TikTok, Instagram Reels, and paid social. Written, filmed, and edited to perform.</p>
+          <ul>
+            <li>Product reviews</li>
+            <li>Lifestyle integrations</li>
+            <li>Hook-driven ad formats</li>
+            <li>Multiple aspect ratios</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Brand fit -->
+      <div class="brand-fit">
+        <div class="brand-fit__inner">
+          <p class="brand-fit__eyebrow">Ideal Brand Fit</p>
+          <div class="brand-fit__tags">
+            <span class="brand-tag">Surf & Water Sports</span>
+            <span class="brand-tag">Dive & Snorkel Gear</span>
+            <span class="brand-tag">Outdoor & Adventure</span>
+            <span class="brand-tag">Marine Conservation</span>
+            <span class="brand-tag">Tourism Boards</span>
+            <span class="brand-tag">Travel Brands</span>
+            <span class="brand-tag">Sustainable Lifestyle</span>
+            <span class="brand-tag">Camera & GoPro Gear</span>
+            <span class="brand-tag">Wetsuit & Surf Apparel</span>
+            <span class="brand-tag">Outdoor Clothing</span>
+            <span class="brand-tag">Ski & Snow Sports</span>
+            <span class="brand-tag">Rainforest & Eco Tourism</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ENQUIRE -->
+  <section class="enquire-section" id="enquire">
+    <div class="enquire-section__inner">
+      <div>
+        <h2 class="enquire-section__title">Let's make<br/>something<br/><em>worth watching</em></h2>
+        <p class="enquire-section__desc">Tell me about your brand and what you need. I'll get back to you within 48 hours with ideas, availability, and rates.</p>
+      </div>
+      <div data-fs-success style="display:none; padding:1rem; background:rgba(255,255,255,0.15); color:white; font-size:0.9rem; margin-bottom:1rem;">Enquiry sent — I'll get back to you within 48 hours.</div>
+      <div data-fs-error style="display:none; padding:1rem; background:rgba(255,0,0,0.2); color:white; font-size:0.9rem; margin-bottom:1rem;">Something went wrong. Please email heyjoekerven@gmail.com directly.</div>
+      <form class="enquire-form" id="ugcForm" action="https://formspree.io/f/mlgvkvdp" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="text" name="brand" placeholder="Brand / Company" />
+        <select name="content_type">
+          <option value="">Type of content needed</option>
+          <option>Underwater & Ocean Content</option>
+          <option>Adventure Travel & Nature</option>
+          <option>Hook-Driven Ad Creative</option>
+          <option>Multiple types</option>
+          <option>Not sure yet</option>
+        </select>
+        <input type="hidden" name="enquiry_type" value="UGC / Content Creation" />
+        <textarea name="message" rows="4" placeholder="Tell me about your brand and what you're looking for..."></textarea>
+        <button type="submit" class="btn btn--white">Send Enquiry →</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__logo">Joe Kerven</div>
+    <a href="index.html" class="footer__back">← Back to main site</a>
+  </footer>
+
+  <script async src="https://www.tiktok.com/embed.js"></script>
+  <script>
+    const form = document.getElementById('ugcForm');
+    if (form) {
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        const btn = form.querySelector('button[type="submit"]');
+        btn.textContent = 'Enquiry Sent ✓';
+        btn.style.background = 'var(--ocean-pale)';
+        setTimeout(() => {
+          btn.textContent = 'Send Enquiry →';
+          btn.style.background = '';
+          form.reset();
+        }, 3000);
+      });
+    }
+  </script>
+
+</body>
+</html>
