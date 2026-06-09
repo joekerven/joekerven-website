@@ -587,6 +587,38 @@ input, select, textarea { font-family: var(--font-sans); }
   font-size: 0.68rem; color: rgba(245,240,232,0.2); letter-spacing: 0.06em;
 }
 
+/* ===== JOURNAL SUBSTACK FEATURE ===== */
+.journal__substack-feature {
+  position: relative; max-width: var(--max);
+  background-image: url('https://res.cloudinary.com/daw9qytcn/image/upload/v1781009778/adrift_cover.jpg_aotbqs.jpg');
+  background-size: cover; background-position: center;
+  padding: 5rem 4rem; margin-bottom: 3rem; overflow: hidden;
+}
+.journal__substack-feature::before {
+  content: ''; position: absolute; inset: 0;
+  background: rgba(10,20,25,0.72);
+}
+.journal__substack-feature__content { position: relative; z-index: 1; max-width: 600px; }
+.journal__substack-feature__label {
+  font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--ocean-light); margin-bottom: 1.25rem; font-weight: 500; display: block;
+}
+.journal__substack-feature__title {
+  font-family: var(--font-serif); font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 300; color: var(--cream); line-height: 1.1; margin-bottom: 1rem;
+}
+.journal__substack-feature__sub {
+  font-size: 1rem; line-height: 1.85; color: rgba(245,240,232,0.65);
+  font-weight: 300; margin-bottom: 0.75rem;
+}
+.journal__substack-feature__source {
+  font-family: var(--font-serif); font-style: italic; font-size: 0.82rem;
+  color: rgba(245,240,232,0.3); margin-bottom: 2rem; display: block;
+}
+@media (max-width: 1024px) {
+  .journal__substack-feature { padding: 3.5rem 2rem; }
+}
+
 </style>
 </head>
 <body>
@@ -960,15 +992,27 @@ input, select, textarea { font-family: var(--font-sans); }
         </div>
       </article>
       <article class="journal-card">
-        <div class="journal-card__img"><img src="https://res.cloudinary.com/daw9qytcn/image/upload/v1780498204/photo_mountain.jpg.jpg" alt="Adventure" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+        <div class="journal-card__img"><img src="https://res.cloudinary.com/daw9qytcn/image/upload/v1781009778/adrift_cover.jpg_aotbqs.jpg" alt="Adrift" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
         <div class="journal-card__content">
-          <span class="journal-tag">Adventure</span>
-          <h3>Why I left ecology to go to Peru</h3>
-          <p>I had a good job, a First Class degree, and a career mapped out. Then I booked a one-way ticket to the Amazon.</p>
-          <a href="#" class="journal-link">Coming soon →</a>
+          <span class="journal-tag">Personal Essay</span>
+          <h3>Adrift</h3>
+          <p>On finishing university, drowning in everyone else's advice, and the moment you decide to take the reins back.</p>
+          <a href="https://joekerven.substack.com/p/adrift" class="journal-link">Read →</a>
         </div>
       </article>
     </div>
+
+    <!-- FEATURED SUBSTACK POST -->
+    <div class="journal__substack-feature">
+      <div class="journal__substack-feature__content">
+        <span class="journal__substack-feature__label">Latest from The Tide Line</span>
+        <h2 class="journal__substack-feature__title">Adrift</h2>
+        <p class="journal__substack-feature__sub">On finishing university, drowning in everyone else's advice, and the moment you decide to take the reins back.</p>
+        <span class="journal__substack-feature__source"><em>The Tide Line — joekerven.substack.com</em></span>
+        <a href="https://joekerven.substack.com/p/adrift" class="btn btn--outline-light">Read on Substack →</a>
+      </div>
+    </div>
+
     <div class="journal__newsletter">
       <div class="journal__newsletter-inner">
         <div>
