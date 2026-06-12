@@ -66,6 +66,15 @@ Always maintain Joe's voice. Never add corporate language. When in doubt — wou
 ## Style Notes
 - Do NOT use em dashes in writing. Use short sentences instead.
 
-## Pending Website Updates
+## Published Substack Articles
+Keep this list updated so Joe never writes the same piece twice.
+
+1. **Adrift** — Personal essay. On finishing university, drowning in advice, taking the reins back. Live at joekerven.substack.com/p/adrift
+2. **The Sheep That Are Too Scared to Eat** — Dall sheep science. On fear, foraging, and a population in freefall. Published ~June 2026.
+3. **684 Fins, One Lab, and a Species Running Out of Time** — Shark fin DNA barcoding in Singapore. Published 2 July 2026.
+4. **Deep Sea Drama: Octopus combat tactics for social serenity** — Gloomy octopus throwing behaviour in Jervis Bay. Published ~June 2026.
+
+## Scheduled Website Updates
 - DATE DUE: 2026-06-17 — Update index.html: replace the Adrift featured Substack banner with the new post "The Sheep That Are Too Scared to Eat" (subtitle: "On fear, foraging, and a population in freefall."). Cover image is Joe's photo in blue rain jacket in fog. Get the correct Substack URL from joekerven.substack.com first.
-- Add an Archive section to writing.html for past Substack articles. Adrift goes in there first. The Sheep That Are Too Scared to Eat will follow once live.
+- DATE DUE: 2026-07-02 — Add shark fin article to From The Tide Line archive on writing.html. Swap in as homepage featured post.
+- DATE DUE: 2026-07-12 — Add octopus article to From The Tide Line archive on writing.html. Swap in as homepage featured post.
