@@ -62,3 +62,10 @@ Bad: "Compelling copy that resonates with target audiences."
 
 ## When Updating the Website
 Always maintain Joe's voice. Never add corporate language. When in doubt — would Joe actually say this out loud? If not, rewrite it.
+
+## Style Notes
+- Do NOT use em dashes in writing. Use short sentences instead.
+
+## Pending Website Updates
+- DATE DUE: 2026-06-17 — Update index.html: replace the Adrift featured Substack banner with the new post "The Sheep That Are Too Scared to Eat" (subtitle: "On fear, foraging, and a population in freefall."). Cover image is Joe's photo in blue rain jacket in fog. Get the correct Substack URL from joekerven.substack.com first.
+- Add an Archive section to writing.html for past Substack articles. Adrift goes in there first. The Sheep That Are Too Scared to Eat will follow once live.

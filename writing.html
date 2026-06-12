@@ -191,6 +191,26 @@
     .signup-form input::placeholder { color: rgba(245,240,232,0.25); }
     .signup-form__note { font-size: 0.7rem; color: rgba(245,240,232,0.2); }
 
+    /* ===== FROM THE TIDE LINE ARCHIVE ===== */
+    .tideline-archive { padding: 5rem 4rem; background: var(--charcoal); }
+    .tideline-archive__inner { max-width: 1280px; margin: 0 auto; }
+    .tideline-archive__header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 3rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .tideline-archive__eyebrow { font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ocean-light); margin-bottom: 0.5rem; font-weight: 500; }
+    .tideline-archive__title { font-family: var(--font-serif); font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 300; color: var(--cream); }
+    .tideline-archive__link { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ocean-light); transition: color var(--transition); }
+    .tideline-archive__link:hover { color: var(--cream); }
+    .tideline-archive__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .tideline-archive__card { display: grid; grid-template-columns: 1fr 1fr; background: rgba(255,255,255,0.04); transition: background var(--transition); text-decoration: none; }
+    .tideline-archive__card:hover { background: rgba(255,255,255,0.07); }
+    .tideline-archive__card-img { height: 100%; min-height: 220px; overflow: hidden; }
+    .tideline-archive__card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .tideline-archive__card-content { padding: 2rem; display: flex; flex-direction: column; gap: 0.75rem; }
+    .tideline-archive__card-tag { font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ocean-light); }
+    .tideline-archive__card-title { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 400; color: var(--cream); line-height: 1.2; }
+    .tideline-archive__card-desc { font-size: 0.85rem; line-height: 1.8; color: rgba(245,240,232,0.5); font-weight: 300; flex: 1; }
+    .tideline-archive__card-read { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ocean-light); margin-top: auto; transition: color var(--transition); }
+    .tideline-archive__card:hover .tideline-archive__card-read { color: var(--cream); }
+
     /* ===== HIRE ME SECTION ===== */
     .hire-section { background: var(--cream-dark); padding: 5rem 4rem; }
     .hire-section__inner { max-width: 1280px; margin: 0 auto; }
@@ -361,6 +381,10 @@
       .writing-card--featured .writing-card__img { height: 220px; }
       .substack-section { padding: 4rem 2rem; }
       .substack-section__inner { grid-template-columns: 1fr; gap: 3rem; }
+      .tideline-archive { padding: 4rem 2rem; }
+      .tideline-archive__grid { grid-template-columns: 1fr; }
+      .tideline-archive__card { grid-template-columns: 1fr; }
+      .tideline-archive__card-img { min-height: 200px; }
       .hire-section { padding: 4rem 2rem; }
       .hire-section__header { grid-template-columns: 1fr; gap: 2rem; }
       .hire-grid { grid-template-columns: 1fr; }
@@ -517,24 +541,6 @@
 
     </div>
 
-    <!-- PERSONAL ESSAYS -->
-    <div class="writing-section__category-label">Personal Essays <span>— Honest writing from the road</span></div>
-    <div class="writing-grid">
-
-      <div class="writing-card writing-card--featured" data-category="essay" onclick="openModal('adrift')">
-        <div class="writing-card__img"><img src="https://res.cloudinary.com/daw9qytcn/image/upload/v1781009778/adrift_cover.jpg_aotbqs.jpg" alt="Adrift" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
-        <div class="writing-card__content">
-          <span class="writing-card__tag">Personal Essay</span>
-          <h2 class="writing-card__title">Adrift</h2>
-          <p class="writing-card__desc">On finishing university, drowning in everyone else's advice, and the moment you decide to take the reins back. Written on a ferry to the Isles of Scilly.</p>
-          <p class="writing-card__excerpt">"I feel as if I am adrift and can't work out how to put up my sail. More like the shadows in between the stars at night."</p>
-          <span class="writing-card__read">Read essay →</span>
-        </div>
-      </div>
-
-      </div>
-
-    </div>
 
     <!-- BRAND COPY -->
     <div class="writing-section__category-label">Brand Copy <span>— Spec work & samples</span></div>
@@ -586,6 +592,34 @@
 
     </div>
   </div>
+
+  <!-- FROM THE TIDE LINE ARCHIVE -->
+  <section class="tideline-archive">
+    <div class="tideline-archive__inner">
+      <div class="tideline-archive__header">
+        <div>
+          <p class="tideline-archive__eyebrow">The Tide Line on Substack</p>
+          <h2 class="tideline-archive__title">From The Tide Line</h2>
+        </div>
+        <a href="https://joekerven.substack.com" class="tideline-archive__link">Read all posts →</a>
+      </div>
+      <div class="tideline-archive__grid">
+
+        <a href="https://joekerven.substack.com/p/adrift" class="tideline-archive__card">
+          <div class="tideline-archive__card-img">
+            <img src="https://res.cloudinary.com/daw9qytcn/image/upload/v1781009778/adrift_cover.jpg_aotbqs.jpg" alt="Adrift" />
+          </div>
+          <div class="tideline-archive__card-content">
+            <span class="tideline-archive__card-tag">Personal Essay</span>
+            <p class="tideline-archive__card-title">Adrift</p>
+            <p class="tideline-archive__card-desc">On finishing university, drowning in everyone else's advice, and the moment you decide to take the reins back.</p>
+            <span class="tideline-archive__card-read">Read on Substack →</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
 
   <!-- SUBSTACK STRIP -->
   <section class="substack-strip" id="substack">
