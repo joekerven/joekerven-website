@@ -72,9 +72,9 @@ Keep this list updated so Joe never writes the same piece twice.
 1. **Adrift** — Personal essay. On finishing university, drowning in advice, taking the reins back. Live at joekerven.substack.com/p/adrift
 2. **The Sheep That Are Too Scared to Eat** — Dall sheep science. On fear, foraging, and a population in freefall. Published ~June 2026.
 3. **684 Fins, One Lab, and a Species Running Out of Time** — Shark fin DNA barcoding in Singapore. Published 2 July 2026.
-4. **Deep Sea Drama: Octopus combat tactics for social serenity** — Gloomy octopus throwing behaviour in Jervis Bay. Published ~June 2026.
+4. **Deep Sea Drama: Octopus combat tactics for social serenity** — Gloomy octopus throwing behaviour in Jervis Bay. Written but NOT yet live on Substack as of 3 July 2026.
 
 ## Scheduled Website Updates
-- DATE DUE: 2026-06-17 — Update index.html: replace the Adrift featured Substack banner with the new post "The Sheep That Are Too Scared to Eat" (subtitle: "On fear, foraging, and a population in freefall."). Cover image is Joe's photo in blue rain jacket in fog. Get the correct Substack URL from joekerven.substack.com first.
-- DATE DUE: 2026-07-02 — Add shark fin article to From The Tide Line archive on writing.html. Swap in as homepage featured post.
-- DATE DUE: 2026-07-12 — Add octopus article to From The Tide Line archive on writing.html. Swap in as homepage featured post.
+- DATE DUE: 2026-07-12 — Add octopus article ("Deep Sea Drama") to From The Tide Line archive on writing.html and swap in as homepage featured post. NOTE: as of 3 July it was NOT yet published on Substack — check joekerven.substack.com for the URL and cover image first.
+- DONE 2026-07-03 — Sheep article added to From The Tide Line archive on writing.html (used photo_alps as cover; swap for the blue-rain-jacket fog photo when Joe uploads it to Cloudinary).
+- DONE 2026-07-03 — Shark fin article added to archive and set as featured post on index.html and writing.html (used photo_seaSnake as cover; swap for a real shark/fin image when available).
