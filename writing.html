@@ -8,7 +8,12 @@
   <meta name="author" content="Joe Kerven" />
   <meta property="og:title" content="Writing — Joe Kerven" />
   <meta property="og:description" content="Travel essays, science communication, poetry and brand copy by Joe Kerven — marine scientist, surf instructor and writer." />
+  <meta property="og:url" content="https://joekerven.com/writing.html" />
+  <meta property="og:image" content="https://res.cloudinary.com/daw9qytcn/image/upload/w_1200,h_630,c_fill,g_auto,f_auto,q_auto/v1780498203/photo_joe_philippines.jpg.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://res.cloudinary.com/daw9qytcn/image/upload/w_1200,h_630,c_fill,g_auto,f_auto,q_auto/v1780498203/photo_joe_philippines.jpg.jpg" />
   <title>Writing — Joe Kerven</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
@@ -607,7 +612,7 @@
 
         <a href="https://joekerven.substack.com/p/684-fins-one-lab-and-a-species-running" class="tideline-archive__card">
           <div class="tideline-archive__card-img">
-            <img src="https://res.cloudinary.com/daw9qytcn/image/upload/v1780498205/photo_seaSnake.jpg.jpg" alt="684 Fins, One Lab, and a Species Running Out of Time" />
+            <img src="https://res.cloudinary.com/daw9qytcn/image/upload/f_auto,q_auto,w_1000/v1780498205/photo_seaSnake.jpg.jpg" alt="684 Fins, One Lab, and a Species Running Out of Time" />
           </div>
           <div class="tideline-archive__card-content">
             <span class="tideline-archive__card-tag">Marine Science</span>
@@ -619,7 +624,7 @@
 
         <a href="https://joekerven.substack.com/p/the-sheep-that-are-too-scared-to" class="tideline-archive__card">
           <div class="tideline-archive__card-img">
-            <img src="https://res.cloudinary.com/daw9qytcn/image/upload/v1780498203/photo_alps.jpg.jpg" alt="The Sheep That Are Too Scared to Eat" />
+            <img src="https://res.cloudinary.com/daw9qytcn/image/upload/f_auto,q_auto,w_1000/v1780498202/photo_ferry_smile.jpg.jpg" alt="The Sheep That Are Too Scared to Eat" />
           </div>
           <div class="tideline-archive__card-content">
             <span class="tideline-archive__card-tag">Wildlife Science</span>
@@ -631,7 +636,7 @@
 
         <a href="https://joekerven.substack.com/p/adrift" class="tideline-archive__card">
           <div class="tideline-archive__card-img">
-            <img src="https://res.cloudinary.com/daw9qytcn/image/upload/v1781009778/adrift_cover.jpg_aotbqs.jpg" alt="Adrift" />
+            <img src="https://res.cloudinary.com/daw9qytcn/image/upload/f_auto,q_auto,w_1000/v1781009778/adrift_cover.jpg_aotbqs.jpg" alt="Adrift" />
           </div>
           <div class="tideline-archive__card-content">
             <span class="tideline-archive__card-tag">Personal Essay</span>
@@ -654,7 +659,7 @@
       </div>
       <a href="https://joekerven.substack.com/p/684-fins-one-lab-and-a-species-running" class="substack-featured-card">
         <div class="substack-featured-card__img">
-          <img src="https://res.cloudinary.com/daw9qytcn/image/upload/v1780498205/photo_seaSnake.jpg.jpg" alt="684 Fins, One Lab, and a Species Running Out of Time" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <img src="https://res.cloudinary.com/daw9qytcn/image/upload/f_auto,q_auto,w_1000/v1780498205/photo_seaSnake.jpg.jpg" alt="684 Fins, One Lab, and a Species Running Out of Time" style="width:100%;height:100%;object-fit:cover;display:block;" />
         </div>
         <div>
           <span class="substack-featured-card__tag">Latest post</span>
@@ -1033,15 +1038,15 @@ Be an odyssey.</em></p>
       }
     });
 
-    // Newsletter
+    // Newsletter (Substack)
     function subscribeEmail() {
       const input = document.getElementById('substackEmail');
-      const btn = document.querySelector('.signup-form .btn');
-      if (input && input.value.includes('@')) {
-        btn.textContent = "You're in ✓";
-        btn.style.background = '#1a5c6e';
+      const email = input ? input.value.trim() : '';
+      if (email.includes('@')) {
+        window.open('https://joekerven.substack.com/subscribe?email=' + encodeURIComponent(email), '_blank');
         input.value = '';
-        setTimeout(() => { btn.textContent = 'Subscribe →'; btn.style.background = ''; }, 3000);
+      } else {
+        window.open('https://joekerven.substack.com/subscribe', '_blank');
       }
     }
   </script>

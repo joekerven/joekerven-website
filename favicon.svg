@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#1A1A18"/>
+  <path d="M0 44 Q 16 38 32 44 T 64 44 L 64 64 L 0 64 Z" fill="#2A6B7C" opacity="0.55"/>
+  <path d="M0 50 Q 16 44 32 50 T 64 50 L 64 64 L 0 64 Z" fill="#5A9BAB" opacity="0.4"/>
+  <text x="32" y="40" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-style="italic" fill="#F5F0E8" text-anchor="middle">JK</text>
+</svg>
