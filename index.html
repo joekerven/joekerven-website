@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Joe Kerven is a marine scientist, UGC content creator, copywriter and poet. First Class Conservation Biology graduate, PADI Rescue Diver, surf instructor. Based wherever the ocean takes him." />
-  <meta name="keywords" content="Joe Kerven, UGC creator, marine scientist, ocean content creator, copywriter, surf instructor, conservation biology" />
+    <meta name="description" content="Joe Kerven is a marine scientist, content creator and storyteller, copywriter and poet. First Class Conservation Biology graduate, PADI Rescue Diver, surf instructor. Based wherever the ocean takes him." />
+  <meta name="keywords" content="Joe Kerven, content creator, marine scientist, ocean content creator, copywriter, surf instructor, conservation biology" />
   <meta name="author" content="Joe Kerven" />
   <meta property="og:title" content="Joe Kerven — Marine Scientist, Ocean Creator & Writer" />
-  <meta property="og:description" content="Joe Kerven is a marine scientist, UGC content creator, copywriter and poet. First Class Conservation Biology graduate, PADI Rescue Diver, surf instructor. Based wherever the ocean takes him." />
+  <meta property="og:description" content="Joe Kerven is a marine scientist, content creator and storyteller, copywriter and poet. First Class Conservation Biology graduate, PADI Rescue Diver, surf instructor. Based wherever the ocean takes him." />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Joe Kerven — Marine Scientist, Ocean Creator & Writer" />
-  <meta name="twitter:description" content="Joe Kerven is a marine scientist, UGC content creator, copywriter and poet. First Class Conservation Biology graduate, PADI Rescue Diver, surf instructor. Based wherever the ocean takes him." />
+  <meta name="twitter:description" content="Joe Kerven is a marine scientist, content creator and storyteller, copywriter and poet. First Class Conservation Biology graduate, PADI Rescue Diver, surf instructor. Based wherever the ocean takes him." />
   <title>Joe Kerven — Marine Scientist, Ocean Creator & Writer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -159,10 +159,16 @@ input, select, textarea { font-family: var(--font-sans); }
   margin-bottom: 1.25rem; animation: fadeUp 1s ease both;
 }
 .hero__headline em { font-style: italic; color: var(--ocean-light); }
+.hero__subheadline {
+  font-family: var(--font-serif); font-style: italic; font-size: clamp(1.5rem, 3vw, 2.6rem);
+  font-weight: 300; line-height: 1.1; color: var(--white);
+  margin-bottom: 1.25rem; animation: fadeUp 1s 0.1s ease both;
+}
+.hero__subheadline em { font-style: italic; color: var(--white); font-weight: 600; }
 .hero__identity {
   font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase;
-  color: rgba(255,255,255,0.65); margin-bottom: 0.6rem; font-weight: 400;
-  animation: fadeUp 1s 0.15s ease both;
+  color: rgba(255,255,255,0.65); margin-bottom: 2.5rem; font-weight: 400;
+  animation: fadeUp 1s 0.2s ease both;
 }
 .hero__location {
   font-family: var(--font-serif); font-style: italic; font-size: 1rem;
@@ -677,8 +683,8 @@ input, select, textarea { font-family: var(--font-sans); }
     <div class="hero__overlay"></div>
     <div class="hero__content">
       <h1 class="hero__headline"><em>Be Incandescent.</em></h1>
+      <p class="hero__subheadline">Helping people fall in love with their world.</p>
       <p class="hero__identity">Poet · Marine Scientist · PADI Diver · Ocean Storyteller</p>
-      <p class="hero__location">Currently in Peru</p>
       <div class="hero__ctas">
         <a href="#about" class="btn btn--light">My Story</a>
         <a href="#work" class="btn btn--outline-light">Work With Me</a>
@@ -764,7 +770,7 @@ input, select, textarea { font-family: var(--font-sans); }
   <!-- CONTENT / UGC -->
   <section class="content-section" id="content">
     <div class="content-section__header">
-      <p class="section-eyebrow">Content & UGC</p>
+      <p class="section-eyebrow">Content Creation & Storytelling</p>
       <h2 class="section-title">Scroll-stopping content<br/><em>from the places most<br/>people only dream about</em></h2>
       <p class="content-section__sub">Ocean. Rainforest. Mountains. Real environments, real experiences — content that performs because it's genuinely lived.</p>
     </div>
@@ -834,11 +840,11 @@ input, select, textarea { font-family: var(--font-sans); }
     <div class="ugc-section__inner">
       <div class="ugc-section__header">
         <div class="ugc-section__title-col">
-          <p class="section-eyebrow">UGC & Content Creation</p>
+          <p class="section-eyebrow">Content Creation & Storytelling</p>
           <h2 class="section-title">Content that performs<br/><em>because it's genuinely<br/>lived</em></h2>
         </div>
         <div class="ugc-section__desc">
-          <p>Most UGC creators rent a studio or film in their bedroom. I film underwater with sharks, in the Amazon rainforest, on Atlantic surf breaks, and on mountain slopes in Japan.</p>
+          <p>Most content creators rent a studio or film in their bedroom. I film underwater with sharks, in the Amazon rainforest, on Atlantic surf breaks, and on mountain slopes in Japan.</p>
           <br/>
           <p>I'm a <strong>PADI Rescue Diver</strong>, a <strong>qualified surf instructor</strong>, and a <strong>First Class Conservation Biologist</strong>. When I feature your outdoor or lifestyle brand, it's not acting. It's a Tuesday.</p>
           <br/>
@@ -904,7 +910,7 @@ input, select, textarea { font-family: var(--font-sans); }
       </div>
 
       <div style="margin-top:3rem;">
-        <a href="#contact" onclick="selectService('UGC / Content Creation')" class="btn btn--sage">Commission UGC →</a>
+        <a href="#contact" onclick="selectService('Content Creation & Storytelling')" class="btn btn--sage">Commission Content →</a>
       </div>
     </div>
   </section>
@@ -1026,7 +1032,7 @@ input, select, textarea { font-family: var(--font-sans); }
         <div class="work-card__img"><img src="https://res.cloudinary.com/daw9qytcn/image/upload/v1780498205/photo_seaSnake.jpg.jpg" alt="UGC content" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
         <div class="work-card__content">
           <span class="work-card__num">01</span>
-          <h3>UGC & Content Creation</h3>
+          <h3>Content Creation & Storytelling</h3>
           <p>Short-form video content shot where most creators aren't — underwater with sharks, in the Amazon, on Atlantic surf breaks. If your brand belongs outside, I can put it there.</p>
           <ul>
             <li>Underwater & ocean filming</li>
@@ -1036,7 +1042,7 @@ input, select, textarea { font-family: var(--font-sans); }
             <li>Available globally whilst travelling</li>
           </ul>
           <p class="work-card__cred">Filmed by a PADI certified scientific diver & First Class marine biologist</p>
-          <a href="#contact" onclick="selectService('UGC / Content Creation')" class="btn btn--sage">Enquire →</a>
+          <a href="#contact" onclick="selectService('Content Creation & Storytelling')" class="btn btn--sage">Enquire →</a>
         </div>
       </div>
       <div class="work-card">
@@ -1106,7 +1112,7 @@ input, select, textarea { font-family: var(--font-sans); }
           <label>What are you reaching out about?</label>
           <select>
             <option value="">Select one</option>
-            <option>UGC / Content Creation</option>
+            <option>Content Creation & Storytelling</option>
             <option>Copywriting</option>
             <option>Brand Partnership</option>
             <option>Just saying hello</option>
