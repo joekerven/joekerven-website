@@ -75,6 +75,10 @@ Keep this list updated so Joe never writes the same piece twice.
 4. **Deep Sea Drama: Octopus combat tactics for social serenity** — Gloomy octopus throwing behaviour in Jervis Bay. Written but NOT yet live on Substack as of 3 July 2026.
 
 ## Scheduled Website Updates
+- ⏸️ **ON HOLD — DO NOT ADD YET (Joe's call, 18 Aug).** "Breathless Living" (Gili shark-nursery piece) has been **taken down from Substack for now** — he's saving it to launch alongside a proper blog-advertising push with Rosie. **No date. Do not add it to the website until Joe says the push is happening.**
+  - When it does go live: add to the From The Tide Line archive on writing.html. Title: **"Breathless Living"**. Subtitle: **"110,000 tonnes of shark a year. And one hidden nursery trying to save what's left."**
+  - **Cover image (KEEP — Joe has chosen this one):** photo of Joe looking up through the jungle canopy — tall palm, dense green trees, pale sky — with a dark green overlay, serif title lower-left, "The Tide Line" in italic beneath. ⚠️ Claude does NOT hold the image file; **Joe must keep the original safe.**
+  - Draft + exact title/subtitle saved at `drafts\shark-nursery-gili-substack.txt`.
 - DATE DUE: 2026-07-12 — Add octopus article ("Deep Sea Drama") to From The Tide Line archive on writing.html and swap in as homepage featured post. NOTE: as of 3 July it was NOT yet published on Substack — check joekerven.substack.com for the URL and cover image first.
 - DONE 2026-07-03 — Sheep article added to From The Tide Line archive on writing.html (used photo_alps as cover; swap for the blue-rain-jacket fog photo when Joe uploads it to Cloudinary).
 - DONE 2026-07-03 — Shark fin article added to archive and set as featured post on index.html and writing.html (used photo_seaSnake as cover; swap for a real shark/fin image when available).
