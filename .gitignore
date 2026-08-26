@@ -2,3 +2,6 @@
 # Unpublished writing and internal notes - never publish
 drafts/
 outreach/
+
+# Internal working notes - keep local, do not publish
+.claude/
